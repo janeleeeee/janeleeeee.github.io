@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Jane-lee</title>
+  
+  <subtitle>jane-lee De party</subtitle>
+  <link href="https://janeleeeee.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://janeleeeee.github.io/"/>
+  <updated>2021-10-23T15:02:43.336Z</updated>
+  <id>https://janeleeeee.github.io/</id>
+  
+  <author>
+    <name>Jane lee</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>关于http请求的请求头</title>
+    <link href="https://janeleeeee.github.io/2021/10/23/HTTP/%E8%AF%B7%E6%B1%82%E5%A4%B4/"/>
+    <id>https://janeleeeee.github.io/2021/10/23/HTTP/%E8%AF%B7%E6%B1%82%E5%A4%B4/</id>
+    <published>2021-10-23T09:42:59.981Z</published>
+    <updated>2021-10-23T15:02:43.336Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="关于http请求的请求头"><a href="#关于http请求的请求头" class="headerlink" title="关于http请求的请求头"></a>关于http请求的请求头</h1><h2 id="Content-Type"><a href="#Content-Type" class="headerlink" title="Content-Type"></a>Content-Type</h2><p><code>在request-headers和response-headers中携带，用于标记传送的内容是哪种媒体类型，即请求体的编码类型。</code><br>在响应头中Content-Type告知客户端实际返回内容的内容类型。当然，浏览器可以自己查找媒体类型，当然这种行为可以禁止。  </p><h2 id="常用句法"><a href="#常用句法" class="headerlink" title="常用句法"></a>常用句法</h2><pre><code>Content-Type: text/html; charset=utf-8Content-Type: multipart/form-data; boundary=something  Content-Type: application/jsonContent-Type: application/x-www-form-urlencoded</code></pre><h2 id="Content-Type-text-html-charset-utf-8"><a href="#Content-Type-text-html-charset-utf-8" class="headerlink" title="Content-Type: text/html; charset=utf-8"></a>Content-Type: text/html; charset=utf-8</h2><pre><code>text/html标识了媒体类型，charset=utf-8代表编码标准。  </code></pre><h2 id="Content-Type-application-x-www-form-urlencoded"><a href="#Content-Type-application-x-www-form-urlencoded" class="headerlink" title="Content-Type: application/x-www-form-urlencoded"></a>Content-Type: application/x-www-form-urlencoded</h2><p><code>浏览器原生支持、post的默认方式</code><br>    通过html的form表单提交post请求中，请求头的content-type由form表单的enctype属性指定；<br>    若未指定enctype时，浏览器的原生form表单默认使用application/x-www-form-urlencoded   </p><h2 id="multipart-form-data"><a href="#multipart-form-data" class="headerlink" title="multipart/form-data"></a>multipart/form-data</h2><p><code>浏览器原生支持、上传文件</code><br>    常见的post请求提交数据的方式。使用表单·上传文件·时，必须让form表单的enctype属性为multipart/form-data<br>    首先，生成了一个boundary用于分割不同的字段，避免与正文内容冲突，boundary很长很复杂。<br>    如果传输的是文件，还要包含文件名和文件类型信息。<br>    这种方式一般是用于上传文件，服务器端支持良好。  </p><h2 id="application-json"><a href="#application-json" class="headerlink" title="application/json"></a>application/json</h2><pre><code>用于请求头的话，意思就是客户端通知服务端请求体的编码类型是序列化之后的字符串  </code></pre>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;关于http请求的请求头&quot;&gt;&lt;a href=&quot;#关于http请求的请求头&quot; class=&quot;headerlink&quot; title=&quot;关于http请求的请求头&quot;&gt;&lt;/a&gt;关于http请求的请求头&lt;/h1&gt;&lt;h2 id=&quot;Content-Type&quot;&gt;&lt;a href=&quot;#C</summary>
+      
+    
+    
+    
+    <category term="可视化" scheme="https://janeleeeee.github.io/categories/%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>可视化项目准备</title>
+    <link href="https://janeleeeee.github.io/2021/10/17/%E5%8F%AF%E8%A7%86%E5%8C%96/%E5%85%B3%E4%BA%8E%E5%8F%AF%E8%A7%86%E5%8C%96%E6%95%B0%E6%8D%AE%E5%A4%A7%E5%B1%8F/"/>
+    <id>https://janeleeeee.github.io/2021/10/17/%E5%8F%AF%E8%A7%86%E5%8C%96/%E5%85%B3%E4%BA%8E%E5%8F%AF%E8%A7%86%E5%8C%96%E6%95%B0%E6%8D%AE%E5%A4%A7%E5%B1%8F/</id>
+    <published>2021-10-17T11:35:27.296Z</published>
+    <updated>2021-10-17T15:23:04.629Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="可视化大屏诞生"><a href="#可视化大屏诞生" class="headerlink" title="可视化大屏诞生"></a>可视化大屏诞生</h1><p>根据不同业务场景的要求，数据以更加直观地展示形式进行展示，遂出现了可视化的大屏。数据化大屏，顾名思义，就是展示在大屏上的多样化的展示形式，区别于纯数字化展示，添加了图表展示和对比更加直观。解决了数据分散的缺点，通过数据采集、清洗、分析等操作后，进行一个数据化的展示。</p><h1 id="物料准备"><a href="#物料准备" class="headerlink" title="物料准备"></a>物料准备</h1><h2 id="常用开源可视化素材基础库"><a href="#常用开源可视化素材基础库" class="headerlink" title="常用开源可视化素材基础库"></a>常用开源可视化素材基础库</h2><ul><li>echarts—基于js，最近版本对ts也进行了支持。<a href="https://echarts.apache.org/handbook/zh/get-started/">https://echarts.apache.org/handbook/zh/get-started/</a></li><li>D3.js—数据化驱动的可视化库，可以脱离前端框架在浏览器中独立运行。<a href="https://github.com/d3/d3/wiki/API--%E4%B8%AD%E6%96%87%E6%89%8B%E5%86%8C">https://github.com/d3/d3/wiki/API--%E4%B8%AD%E6%96%87%E6%89%8B%E5%86%8C</a>  </li><li>antv—一套完整的可视化组件体系（蚂蚁团队）    </li><li>Chart.js —基于html5的js图标库  </li><li>metrics-graphics —对D3.js的二次优化，主要针对可视化和布置时间序列数据  </li><li>C3.js通过包装构造整个图标所需的代码  </li></ul><h2 id="常用可视化组件"><a href="#常用可视化组件" class="headerlink" title="常用可视化组件"></a>常用可视化组件</h2><ul><li>relation-graph—关系图表</li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;可视化大屏诞生&quot;&gt;&lt;a href=&quot;#可视化大屏诞生&quot; class=&quot;headerlink&quot; title=&quot;可视化大屏诞生&quot;&gt;&lt;/a&gt;可视化大屏诞生&lt;/h1&gt;&lt;p&gt;根据不同业务场景的要求，数据以更加直观地展示形式进行展示，遂出现了可视化的大屏。数据化大屏，顾名思义</summary>
+      
+    
+    
+    
+    <category term="可视化" scheme="https://janeleeeee.github.io/categories/%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>hexo g 命令生成的index.html为空</title>
+    <link href="https://janeleeeee.github.io/2021/10/10/hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E7%9B%B8%E5%85%B3/%E5%85%B3%E4%BA%8Ehexo%20g%E5%90%8E%E7%94%9F%E6%88%90%E7%9A%84index.html%E6%98%AF%E7%A9%BA%E7%9A%84/"/>
+    <id>https://janeleeeee.github.io/2021/10/10/hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E7%9B%B8%E5%85%B3/%E5%85%B3%E4%BA%8Ehexo%20g%E5%90%8E%E7%94%9F%E6%88%90%E7%9A%84index.html%E6%98%AF%E7%A9%BA%E7%9A%84/</id>
+    <published>2021-10-10T02:14:06.598Z</published>
+    <updated>2021-10-17T11:33:03.456Z</updated>
+    
+    <content type="html"><![CDATA[<p> 造成hexo g命令不生效或空的html文件，可能存在多种情况。我遇到的问题，是我本地项目的主题文件，butterfly文件夹内的内容缺失，所以在生成网页文件html的时候，造成了空页面的情况。  </p><p> 解决方法：重新clone主题文件至theme文件夹下  <code>git clone xxxx themes/butterfly</code><br> xxxx–git仓库地址 注意，如果之前的空butterfly文件夹未删除的话，要提前删除  </p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt; 造成hexo g命令不生效或空的html文件，可能存在多种情况。我遇到的问题，是我本地项目的主题文件，butterfly文件夹内的内容缺失，所以在生成网页文件html的时候，造成了空页面的情况。  &lt;/p&gt;
+&lt;p&gt; 解决方法：重新clone主题文件至theme文件夹下  </summary>
+      
+    
+    
+    
+    <category term="hexo搭建FAQ" scheme="https://janeleeeee.github.io/categories/hexo%E6%90%AD%E5%BB%BAFAQ/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>ruoyi后台系统</title>
+    <link href="https://janeleeeee.github.io/2021/10/08/%E8%8B%A5%E4%BE%9D--%E5%90%8E%E5%8F%B0%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/"/>
+    <id>https://janeleeeee.github.io/2021/10/08/%E8%8B%A5%E4%BE%9D--%E5%90%8E%E5%8F%B0%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</id>
+    <published>2021-10-08T14:05:31.851Z</published>
+    <updated>2021-10-10T02:36:35.706Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="关于vue"><a href="#关于vue" class="headerlink" title="关于vue"></a>关于vue</h2><pre><code>.vue的data对象内定义的参数必须初始化，否则会显示未定义(not defined)</code></pre><h2 id="登录流程"><a href="#登录流程" class="headerlink" title="登录流程"></a>登录流程</h2><pre><code>。认证--验证当前用户的身份</code></pre><h2 id="VUEX"><a href="#VUEX" class="headerlink" title="VUEX"></a>VUEX</h2><pre><code>mapstate  </code></pre><h2 id="模块的导入导出"><a href="#模块的导入导出" class="headerlink" title="模块的导入导出"></a>模块的导入导出</h2><h3 id="commonJs用法"><a href="#commonJs用法" class="headerlink" title="commonJs用法"></a>commonJs用法</h3><pre><code>。导出 使用modules.exports进行导出操作</code></pre><h3 id="require-和-import区别以及用法"><a href="#require-和-import区别以及用法" class="headerlink" title="require 和 import区别以及用法"></a>require 和 import区别以及用法</h3><pre><code>。require ：运行时调用，可实现路由懒加载  。import ：编译时调用，必须放在文件的头部  </code></pre><h2 id="router（路由）’建立并管理url和对应组件之间的映射关系’"><a href="#router（路由）’建立并管理url和对应组件之间的映射关系’" class="headerlink" title="router（路由）’建立并管理url和对应组件之间的映射关系’"></a>router（路由）’建立并管理url和对应组件之间的映射关系’</h2><p>  。项目中单独vue文件夹—router<br>  。vue-router深度集成vue，区别于传统路由的超链接实现页面跳转，vue-router则是使组件之间进行切换<br>  。只有next()是放行，含有参数的next（**）并不是放行，而是中断当前导航，执行新的导航<br>  。route-link作用等同于a标签<br>  。route-view设置切换的视图在哪里渲染（支持嵌套）<br>  。</p><h2 id="element-ui"><a href="#element-ui" class="headerlink" title="element-ui"></a>element-ui</h2><p>  。el-row—行—gutter：在一行内栅格之间距离，padding-left + padding-right<br>  。loading效果：Element 提供了两种调用 Loading 的方法：指令和服务。<br>      -指令。<code>v-loading</code>绑定boolean值即可。全屏遮罩需要添加fullscreen修饰符（遮罩会插入至 body 上），此时若需要锁定屏幕的滚动，可以使用lock修饰符；<br>      -服务。遮罩默认即为全屏，无需额外设置。  </p><h2 id="css"><a href="#css" class="headerlink" title="css"></a>css</h2><p>  。input框要和label搭配使用。标签文本不仅与其相应的文本输入元素在视觉上相关联<br>  。将一个 <label> 和一个 <input> 元素匹配在一起，你需要给 <input> 一个 id 属性。而 <label> 需要一个 for 属性，其值和  <input> 的 id 一样。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;关于vue&quot;&gt;&lt;a href=&quot;#关于vue&quot; class=&quot;headerlink&quot; title=&quot;关于vue&quot;&gt;&lt;/a&gt;关于vue&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;.vue的data对象内定义的参数必须初始化，否则会显示未定义(not defined)
+&lt;/cod</summary>
+      
+    
+    
+    
+    <category term="项目学习复盘" scheme="https://janeleeeee.github.io/categories/%E9%A1%B9%E7%9B%AE%E5%AD%A6%E4%B9%A0%E5%A4%8D%E7%9B%98/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>md reference</title>
+    <link href="https://janeleeeee.github.io/2021/10/08/hello-world/"/>
+    <id>https://janeleeeee.github.io/2021/10/08/hello-world/</id>
+    <published>2021-10-08T14:05:31.850Z</published>
+    <updated>2021-10-08T14:05:31.850Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt; for</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>npm包管理器</title>
+    <link href="https://janeleeeee.github.io/2021/10/08/npm%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8/"/>
+    <id>https://janeleeeee.github.io/2021/10/08/npm%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8/</id>
+    <published>2021-10-08T14:05:31.850Z</published>
+    <updated>2021-10-08T14:05:31.850Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="npm-包管理器"><a href="#npm-包管理器" class="headerlink" title="npm 包管理器"></a>npm 包管理器</h1><h2 id="npm"><a href="#npm" class="headerlink" title="npm"></a>npm</h2><p><code>是什么？</code>  </p><ol><li>随nodejs一起安装的包管理器</li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;npm-包管理器&quot;&gt;&lt;a href=&quot;#npm-包管理器&quot; class=&quot;headerlink&quot; title=&quot;npm 包管理器&quot;&gt;&lt;/a&gt;npm 包管理器&lt;/h1&gt;&lt;h2 id=&quot;npm&quot;&gt;&lt;a href=&quot;#npm&quot; class=&quot;headerlink&quot; ti</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>vue自定义指令</title>
+    <link href="https://janeleeeee.github.io/2021/10/08/vue%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8C%87%E4%BB%A4/"/>
+    <id>https://janeleeeee.github.io/2021/10/08/vue%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8C%87%E4%BB%A4/</id>
+    <published>2021-10-08T14:05:31.850Z</published>
+    <updated>2021-10-10T02:36:05.812Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="vue自定义指令"><a href="#vue自定义指令" class="headerlink" title="vue自定义指令"></a>vue自定义指令</h1><h2 id="1-新建一个directive文件夹"><a href="#1-新建一个directive文件夹" class="headerlink" title="1.新建一个directive文件夹"></a>1.新建一个directive文件夹</h2><pre><code>。在该文件下内部新建一个index.js文件，目的:进行批量注册指令。  import hasRole from &#39;./hasRole&#39;import hasPermi from &#39;./hasPermi&#39;import waterMarker from &#39;./waterMarker&#39;const install = function(Vue) &#123;    Vue.directive(&#39;hasRole&#39;, hasRole)    Vue.directive(&#39;hasPermi&#39;, hasPermi)    Vue.directive(&#39;waterMarker&#39;, waterMarker)&#125;if (window.Vue) &#123;    window[&#39;hasRole&#39;] = hasRole    window[&#39;hasPermi&#39;] = hasPermi    window[&#39;waterMarker&#39;] = waterMarker    Vue.use(install); // eslint-disable-line&#125;  export default install。在该文件夹下，一个指令新建一个js文件，并导入进index文件，进行注册操作。</code></pre><h2 id="2-在main-js引入并调用"><a href="#2-在main-js引入并调用" class="headerlink" title="2.在main.js引入并调用"></a>2.在main.js引入并调用</h2><pre><code>import Directives from &#39;./JS/directives&#39;Vue.use(Directives)</code></pre><h2 id="3-使用同原生组件一样，如v-show-v-if"><a href="#3-使用同原生组件一样，如v-show-v-if" class="headerlink" title="3.使用同原生组件一样，如v-show,v-if"></a>3.使用同原生组件一样，如v-show,v-if</h2>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;vue自定义指令&quot;&gt;&lt;a href=&quot;#vue自定义指令&quot; class=&quot;headerlink&quot; title=&quot;vue自定义指令&quot;&gt;&lt;/a&gt;vue自定义指令&lt;/h1&gt;&lt;h2 id=&quot;1-新建一个directive文件夹&quot;&gt;&lt;a href=&quot;#1-新建一个direc</summary>
+      
+    
+    
+    
+    <category term="vue业务场景使用" scheme="https://janeleeeee.github.io/categories/vue%E4%B8%9A%E5%8A%A1%E5%9C%BA%E6%99%AF%E4%BD%BF%E7%94%A8/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>微信小程序自定义导航栏适配</title>
+    <link href="https://janeleeeee.github.io/2021/10/08/wechat-%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AF%BC%E8%88%AA%E6%A0%8F/"/>
+    <id>https://janeleeeee.github.io/2021/10/08/wechat-%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AF%BC%E8%88%AA%E6%A0%8F/</id>
+    <published>2021-10-08T14:05:31.850Z</published>
+    <updated>2021-10-08T14:05:31.851Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="自定义导航栏"><a href="#自定义导航栏" class="headerlink" title="自定义导航栏"></a>自定义导航栏</h1><h2 id="基本信息"><a href="#基本信息" class="headerlink" title="基本信息"></a>基本信息</h2><pre><code>。 Android和iOS不同：在顶部和胶囊按钮之间距离相差6pt（Android胶囊和导航栏之间存在6pt空隙）。 Android和iOS相同：胶囊的按钮高度为32pt  。导航栏 = 状态栏（不定） + 标题栏  </code></pre><h2 id="main-point"><a href="#main-point" class="headerlink" title="main point"></a>main point</h2><pre><code>。 导航栏高度 =  胶囊按钮高度 + 状态栏到胶囊按钮间距  。 胶囊按钮是原生组件，单位为px，</code></pre>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;自定义导航栏&quot;&gt;&lt;a href=&quot;#自定义导航栏&quot; class=&quot;headerlink&quot; title=&quot;自定义导航栏&quot;&gt;&lt;/a&gt;自定义导航栏&lt;/h1&gt;&lt;h2 id=&quot;基本信息&quot;&gt;&lt;a href=&quot;#基本信息&quot; class=&quot;headerlink&quot; title=&quot;基</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>关于git</title>
+    <link href="https://janeleeeee.github.io/2021/10/08/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
+    <id>https://janeleeeee.github.io/2021/10/08/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</id>
+    <published>2021-10-08T14:05:31.849Z</published>
+    <updated>2021-10-08T14:05:31.849Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="关于git"><a href="#关于git" class="headerlink" title="关于git"></a>关于git</h1><h2 id="本地新建工程并推送至远程仓库"><a href="#本地新建工程并推送至远程仓库" class="headerlink" title="本地新建工程并推送至远程仓库"></a>本地新建工程并推送至远程仓库</h2><h3 id="第一种情况–远程仓库中是空的"><a href="#第一种情况–远程仓库中是空的" class="headerlink" title="第一种情况–远程仓库中是空的"></a>第一种情况–远程仓库中是空的</h3><p>1.本地项目中使用 <code> git init </code>命令去初始化本地仓库<br>2.使用 <code> git add .</code>命令将修改的文件保存至暂存区<br>3.使用<code> git commit -m&#39;提交本地仓库使用的备注&#39; </code>将暂存区的内容提交至本地仓库<br>4.使用<code> git remote add origin [仓库地址] </code>与远程仓库建立联系，并起别名为origin<br>5.使用<code> git push -u origin [分支名字] </code> 将本地仓库与远程仓库统一，即将本地内容提交至远程仓库  </p><h3 id="第二种情况–远程仓库中有内容（包含readme-md文件）"><a href="#第二种情况–远程仓库中有内容（包含readme-md文件）" class="headerlink" title="第二种情况–远程仓库中有内容（包含readme.md文件）"></a>第二种情况–远程仓库中有内容（包含readme.md文件）</h3><p>1.将远程仓库 <code>clone</code> 至本地环境中(此时的本地仓库已被初始化，且已经和远程仓库建立连接，修改本地文件可直接提交至远程仓库。)<br>2.使用 <code> git add .</code>命令将修改的文件保存至暂存区<br>3.使用<code> git commit -m&#39;提交本地仓库使用的备注&#39; </code>将暂存区的内容提交至本地仓库<br>4.使用<code> git push -u origin [分支名字] </code> 将本地仓库与远程仓库统一，即将本地内容提交至远程仓库<br>5.<code>[ 注意事项 ]</code>如果仓库本身就有内容，只要不是空的，就不能采取第一种方式就行提交，否则会无法合并，提示有不相关的历史。可以强制合并，但存在风险。一般这种情况会发生在新建仓库的时候，顺便加了一个readme.md文件。  </p><h2 id="提交git时的良好习惯"><a href="#提交git时的良好习惯" class="headerlink" title="提交git时的良好习惯"></a>提交git时的良好习惯</h2><p>  <code>多人协同开发时，共同维护一份代码，容易造成代码冲突，所以避免本地的代码被覆盖，应该先将自己的代码** commit **到本地仓库，**pull**远程仓库的代码后，解决完冲突后，再进行本地代码的提交。 </code>   </p><h1 id="git原理"><a href="#git原理" class="headerlink" title="git原理"></a>git原理</h1><h2 id="功能区"><a href="#功能区" class="headerlink" title="功能区"></a>功能区</h2><p>  。工作区（workspace）、暂存区（temporary repository）、本地仓库（local repository）、远程仓库 （remote repository）<br>  。workspace–&gt;git add .–&gt;temporary repository–&gt;git commit–&gt;local repository –&gt; git push –&gt;remote repository  </p><h2 id="命令原理分析"><a href="#命令原理分析" class="headerlink" title="命令原理分析"></a>命令原理分析</h2><h3 id="git-add"><a href="#git-add" class="headerlink" title="git add"></a>git add</h3><p>  。执行该命令，保存暂存区的异动文件（与之前文件相比发生的变化包括修改、新增、删除）至暂存区，底层进行操作：git将代码修改了的部分进行记录，然后进行SHAI操作，生成一个blob对象（快照），存储至仓库中（注意，此时代码快照实际上已经存储到仓库中了），但并没有在目录树上进行映射，只在索引文件中进行映射。  </p><h3 id="git-commit"><a href="#git-commit" class="headerlink" title="git commit"></a>git commit</h3><p>  。将索引中的映射更改到对象树中，对象树会记录所有的commitId和blob的映射，从而可以找到对应的代码<br>  。进行一次commit后，生成一个新的commit，做完提交后，head指针会移动到现在的commit<br>  。每次commit，Git存储的是全新的文件快照并不是储存文件的变更部分</p><h3 id="git的常用操作-amp-问题solve"><a href="#git的常用操作-amp-问题solve" class="headerlink" title="git的常用操作&amp;问题solve"></a>git的常用操作&amp;问题solve</h3><p>  <a href="https://juejin.cn/post/6891146425590087693">https://juejin.cn/post/6891146425590087693</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;关于git&quot;&gt;&lt;a href=&quot;#关于git&quot; class=&quot;headerlink&quot; title=&quot;关于git&quot;&gt;&lt;/a&gt;关于git&lt;/h1&gt;&lt;h2 id=&quot;本地新建工程并推送至远程仓库&quot;&gt;&lt;a href=&quot;#本地新建工程并推送至远程仓库&quot; class=&quot;head</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>自动积分-- 小程序订阅消息</title>
+    <link href="https://janeleeeee.github.io/2021/10/08/company/%E8%87%AA%E5%8A%A8%E7%A0%8D%E4%BB%B7/"/>
+    <id>https://janeleeeee.github.io/2021/10/08/company/%E8%87%AA%E5%8A%A8%E7%A0%8D%E4%BB%B7/</id>
+    <published>2021-10-08T14:05:31.849Z</published>
+    <updated>2021-10-08T14:05:31.849Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="小程序订阅消息"><a href="#小程序订阅消息" class="headerlink" title="小程序订阅消息"></a>小程序订阅消息</h1><h3 id="参考链接-https-blog-csdn-net-Umbrella-Um-article-details-111561671"><a href="#参考链接-https-blog-csdn-net-Umbrella-Um-article-details-111561671" class="headerlink" title="参考链接:https://blog.csdn.net/Umbrella_Um/article/details/111561671"></a>参考链接:<a href="https://blog.csdn.net/Umbrella_Um/article/details/111561671">https://blog.csdn.net/Umbrella_Um/article/details/111561671</a></h3><h2 id="前置条件"><a href="#前置条件" class="headerlink" title="前置条件"></a>前置条件</h2><pre><code>。获取模板ID，在微信公众平台配置；。由用户主动触发，获取下发订阅消息的权限；    wx.requestSubscribeMessage(Object object)；        1.在弹窗订阅消息获取用户授权时，要先通过wx.getSetting 判断用户是否点击过&quot;总是保持以上选择，不再询问”。若用户已经点击保持以上选择，则不再弹出订阅消息框，无论用户选择的是允许还是取消。     wx.getSetting(&#123;        withSubscriptions: true, //withSubscriptions 只返回用户勾选过订阅面板中的“总是保持以上选择，不再询问”的订阅消息。        success(res) &#123;            if (res.subscriptionsSetting &amp;&amp; res.subscriptionsSetting.mainSwitch) &#123; //订阅消息总开关                if (res.subscriptionsSetting.itemSettings &amp;&amp; res.subscriptionsSetting.itemSettings[tmplId]) &#123; //是否永久性订阅                    let item = res.subscriptionsSetting.itemSettings[tmplId]                    if (item == &quot;reject&quot;) &#123;                    console.log(&#39;提示：您拒绝开启订阅消息&#39;)                &#125; else if (item == &quot;accept&quot;) &#123;                console.log(&#39;提示：您已经开启订阅消息&#39;)                &#125; else if (item == &quot;ban&quot;) &#123;                console.log(&#39;提示：您已经被后台封禁&#39;)                &#125;            &#125; else &#123;                // 未勾选过永久性                that.doSubscribe(tmplId)            &#125;             &#125; else &#123;             // 订阅消息总开关未打开            that.doSubscribe(tmplId)         &#125;        &#125;     &#125;)     2.若用户未勾选“保持”，则弹框让用户去选择是否要订阅该消息。          wx.requestSubscribeMessage(Object object)；并在用户点击订阅消息时，并调用后台接口去通知用户的允许行为，否则就是拒绝，不进行处理。          wx.requestSubscribeMessage(&#123;  tmplIds: [tmplId],  success: (res) =&gt; &#123;    if (res[tmplId] === &#39;accept&#39;) &#123;      wx.showToast(&#123;        title: &#39;订阅成功！&#39;,        duration: 2000      &#125;)    &#125; else if (res[tmplId] == &quot;reject&quot;) &#123;      return false    &#125; else &#123;      wx.showToast(&#123;        title: &#39;授权订阅消息有误&#39;,        icon: &#39;none&#39;      &#125;)    &#125;  &#125;,  fail(err) &#123;    // 20004:用户关闭了主开关，无法进行订阅,引导开启    if (err.errCode == 20004) &#123;      wx.showModal(&#123;        title: &#39;订阅消息&#39;,        content: &#39;检测到您未开启订阅消息权限，是否去开启？&#39;,        confirmText: &#39;去设置&#39;,        confirmColor: &#39;#345391&#39;,        cancelText: &#39;取消&#39;,        cancelColor: &#39;#999999&#39;,        success: res =&gt; &#123;          if (res.confirm) &#123;            wx.openSetting(&#123;              withSubscriptions: true,              success(res) &#123;                wx.getSetting(&#123;                  withSubscriptions: true,                  success(response) &#123;                    if (response.subscriptionsSetting.mainSwitch) &#123;                      wx.showModal(&#123;                        title: &#39;提示&#39;,                        content: &#39;设置成功！&#39;,                        showCancel: false,                        success(res) &#123;                          that.doSubscribe()                        &#125;                      &#125;)                    &#125; else &#123;                      wx.showToast(&#123;                        title: &#39;订阅失败！&#39;,                        duration: 2000                      &#125;)                    &#125;                  &#125;                &#125;)              &#125;,              fail(err) &#123;                //失败                console.error(err);              &#125;            &#125;)          &#125;        &#125;      &#125;)    &#125; else &#123;      // 其他错误信息码，对应文档找出原因      console.log(err)    &#125;  &#125;&#125;)。服务端：下发订阅消息      </code></pre>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;小程序订阅消息&quot;&gt;&lt;a href=&quot;#小程序订阅消息&quot; class=&quot;headerlink&quot; title=&quot;小程序订阅消息&quot;&gt;&lt;/a&gt;小程序订阅消息&lt;/h1&gt;&lt;h3 id=&quot;参考链接-https-blog-csdn-net-Umbrella-Um-article-</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>css相关总结</title>
+    <link href="https://janeleeeee.github.io/2021/10/08/css/"/>
+    <id>https://janeleeeee.github.io/2021/10/08/css/</id>
+    <published>2021-10-08T14:05:31.849Z</published>
+    <updated>2021-10-08T14:05:31.849Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="css相关总结"><a href="#css相关总结" class="headerlink" title="css相关总结"></a>css相关总结</h1><h2 id="规则"><a href="#规则" class="headerlink" title="@规则"></a>@规则</h2><pre><code>`css规则是样式表的主体，通常样式表会包含大量规则列表。样式表**包含字符集**，**导入外部样式表/字体**，需要使用@规则。`      。@namespace 告诉css引擎必须考虑XML命名空间      。@media 若满足媒体查询的条件则条件规则组里的规则生效      。@page 描述文档时布局的变化    。@font-face 描述将下载的外部字体    。@keyframes 描述css动画的关键帧    。@decument 若文档样式表满足给定条件则条件规则组的规则生效    。@charset 用于定义样式表使用的字符集（默认时UTF-8)    。@import 告诉css引擎一个外部样式表（link和import存在区别）    。@supports 用于查询特定的css是否生效，可结合not、and、or操作符及逆行后续操作    --link VS import ：        -link 是html标签，除了能导入css外，还能导入别的资源；import 是css语法，只能导入css。        -link 导入的样式会在页面加载时同时加载；import 导入的样式需等到页面加载完后再加载。        -link 没有兼容性问题，import 不兼容ie5以下。        -link  可通过js操作DOM动态引入样式表改变样式；import不支持。</code></pre><h2 id="层叠性"><a href="#层叠性" class="headerlink" title="层叠性"></a>层叠性</h2><pre><code>`用于合并来自多个源的属性值的算法`  按照不同源样式，如下顺序进行层叠，按优先级高往低排序。。作者样式表中的！important声明     &gt;   作者样式表的常规声明    &gt;   用户代理样式表 的声明（浏览器的默认样式）</code></pre><h2 id="选择器"><a href="#选择器" class="headerlink" title="选择器"></a>选择器</h2><pre><code> 基础选择器      。标签选择器    。类选择器     。ID选择器    。通配选择器：*   属性选择器（针对含有某种属性值的标签 eg:src）    。[attr]--------指定属性的元素    。[attr=val]----属性等于指定值的元素    。[attr*=val]---属性包含指定值的元素    。[attr^=val]---属性以指定值开头的元素    。[attr$=val]---属性以指定值结尾的元素    。[attr~=val]---属性包含指定值（完整单词）的元素（不推荐）    。[attr|=val]---属性以指定值（完整单词）开头的元素（不推荐）组合选择器    。相邻兄弟选择器：A + B    。普通兄弟选择器：A ~ B    。子选择器：A &gt; B    。后代选择器：A B</code></pre><h2 id="伪类"><a href="#伪类" class="headerlink" title="伪类"></a>伪类</h2><pre><code>条件伪类      。:lang()：基于元素语言来匹配页面元素    。:dir()：匹配特定文字书写方向的元素；    。:has()：匹配包含指定元素的元素；    。:is()：匹配指定选择器列表里的元素；    。:not()：用来匹配不符合一组选择器的元素；  行为伪类    。:active：鼠标激活的元素；    。:hover： 鼠标悬浮的元素；    。::selection：鼠标选中的元素；状态伪类    。:target：当前锚点的元素；    。:link：未访问的链接元素；    。:visited：已访问的链接元素；    。:focus：输入聚焦的表单元素；    。:required：输入必填的表单元素；    。:valid：输入合法的表单元素；    。:invalid：输入非法的表单元素；    。:in-range：输入范围以内的表单元素；    。:out-of-range：输入范围以外的表单元素；    。:checked：选项选中的表单元素；    。:optional：选项可选的表单元素；    。:enabled：事件启用的表单元素；    。:disabled：事件禁用的表单元素；    。:read-only：只读的表单元素；    。:read-write：可读可写的表单元素；    。:blank：输入为空的表单元素；    。:current()：浏览中的元素；    。:past()：已浏览的元素；    。:future()：未浏览的元素；  结构伪类      。:root：文档的根元素；    。:empty：无子元素的元素；    。:first-letter：元素的首字母；    。:first-line：元素的首行；    。:nth-child(n)：元素中指定顺序索引的元素；    。:nth-last-child(n)：元素中指定逆序索引的元素；；    。:first-child：元素中为首的元素；    。:last-child ：元素中为尾的元素；    。:only-child：父元素仅有该元素的元素；    。:nth-of-type(n)：标签中指定顺序索引的标签；    。:nth-last-of-type(n)：标签中指定逆序索引的标签；    。:first-of-type ：标签中为首的标签；    。:last-of-type：标签中为尾标签；    。:only-of-type：父元素仅有该标签的标签；  伪元素      。::before：在元素前插入内容；    。::after：在元素后插入内容； </code></pre><h2 id="优先级"><a href="#优先级" class="headerlink" title="优先级"></a>优先级</h2><pre><code>`优先级就是分配给指定的css声明的一个权重`    !important &gt; inline &gt; ID &gt; class &gt; element    10000：!important；    01000：内联样式；    00100：ID 选择器；    00010：类选择器、伪类选择器、属性选择器；    00001：元素选择器、伪元素选择器；    00000：通配选择器、后代选择器、兄弟选择器；    **announcements** :        。一定要有限考虑使用样式规则的优先级来解决问题而不是!important         。只有在需要覆盖全站或外部css的特定页面中使用!important         。不要在插件中使用!important         。不要在全站范围的css代码中使用!important  </code></pre><h2 id="继承性"><a href="#继承性" class="headerlink" title="继承性"></a>继承性</h2><pre><code>`子元素会继承父元素对应属性计算后的值`  CSS 属性很多，但并不是所有的属性默认都是能继承父元素对应属性的，那哪些属性存在默认继承的行为呢？一定是那些**不会影响到页面布局的属性**，可以分为如下几类：。字体相关：font-family、font-style、font-size、font-weight 等；。文本相关：text-align、text-indent、text-decoration、text-shadow、letter-spacing、word-spacing、white-space、line-height、color 等；。列表相关：list-style、list-style-image、list-style-type、list-style-position 等；。其他属性：visibility、cursor 等； 对于其他默认不继承的属性也可以通过以下几个属性值来控制继承行为：。inherit：继承父元素对应属性的计算值；。initial：应用该属性的默认值，比如 color 的默认值是 #000；。unset：如果属性是默认可以继承的，则取 inherit 的效果，否则同 initial；。revert：效果等同于 unset，兼容性差。  </code></pre><h2 id="文档流"><a href="#文档流" class="headerlink" title="文档流"></a>文档流</h2><pre><code>` 正常文档流：左→右、上→下 `` 特性 `：    。块级元素会默认占满整行，所以多个块级盒子之间时从上到下排列的    。内联元素默认会在一行里一列一列的排布，当一行放不下的时候，会自动切换至下一行继续按照列排布脱离文档流？    `节点脱离文档流，在正常文档流中的其他节点将忽略该节点并填补其原先空间。一旦脱离文档流，计算其父节点高度时将不会将其高度纳入，脱流节点将不会占用空间。`    。方式：1.浮动 2.定位      。浮动（float）：向左/向右浮动，移动至另一浮动元素旁，该元素原位置将会被文档流内的其他元素占用    。绝对定位（absolute）和固定定位（fixed）同理  </code></pre><h2 id="盒模型（css中一切皆盒子）"><a href="#盒模型（css中一切皆盒子）" class="headerlink" title="盒模型（css中一切皆盒子）"></a>盒模型（css中一切皆盒子）</h2><pre><code>`在css中任何元素都可以看作是一个盒子，都具备content、padding、margin、border``盒模型包含：标准盒模型 &amp; IE盒模型`      **标准盒模型**（content-box）：盒子的实际尺寸 = 内容（设置的宽、高）content + 内边距padding + 边框border  ---不包含内边距和边框的真实数据    IE盒模型（border-box）： 盒子的实际尺寸 = 设置的宽、高 = 内容content + 内边距padding + 边框border   ---包含内边距和边框的数据**现在高版本的浏览器基本上默认都是使用标准盒模型**  </code></pre><h2 id="视觉格式化模型"><a href="#视觉格式化模型" class="headerlink" title="视觉格式化模型"></a>视觉格式化模型</h2><pre><code>`用来处理和在视觉媒体上展示文档时使用的计算规则，规定这些盒子应该怎样放置在页面中去`* out display type（对外显示，决定该元素本身如何布局）:blcok-level box 块级盒子  /   inline-level box 行内级盒子      。block-level box ：display为block,list-item,table,flex,grid,flow-root等    。inline-level box:display为inline,inline-block,inline-table等  所有块级盒子都会参与 BFC，呈现垂直排列；而所有行内级盒子都参会 IFC，呈现水平排列。  block &amp; inline &amp; inline-block：    block-- 。占满一行，默认继承父元素的高度；多个块元素将从上至下进行排列            。设置width/height、padding/margin将会生效      inline--。不会占满一行，宽度随着内容变化；多个inline元素将按照从左至右顺序在一行里排列显示，如果一行显示不下，则自动换行              。设置width/height、padding/margin`不会生效`    inline-block            。行内块元素，不单独占满一行，可看成在一行内可进行左右排列的块元素            。设置width/height、padding/margin将会生效  * inner display type(将元素当成了容器，里面含文本和其他子元素)      container box的类型根据display值的不同，分为4种：        。block container ：建立BFC或IFC          。flex container ：建立FFC          。grid container ：建立GFC         。ruby container ：-      如果把img这种替换元素声明为block是不会产生container box的，因为替换元素比如img设计的初衷就仅仅是通过src把内容替换成图片，根本不会将其视为容器。  </code></pre><h2 id="格式化上下文"><a href="#格式化上下文" class="headerlink" title="格式化上下文"></a>格式化上下文</h2><pre><code>`页面中的一块渲染区域，规定了渲染区域内部的子元素是如何排版以及相互作用的。`  根据不同类型的盒子有不同格式化上下文，大概有4类。      *。BFC---块级格式化上下文    *。IFC---行内格式化上下文      。FFC---弹性格式化上下文      。GFC---格栅格式化上下文  **BFC渲染规则**      。内部的盒子会在垂直方向，一个接一个地放置。      。盒子**垂直**方向的距离由margin决定，属于同一个BFC的两个相邻盒子的margin会发生重叠      。每个元素的margin的左边，与包含块border的左边相接触（对于从左至右的格式化，否则相反），即使存在浮动也是如此      。BFC的区域不会与float盒子重叠（场景：会换行进行浮动）      。BFC就是页面上的一个隔离的独立容器，容器里面的子元素不会影响到外面的元素      。计算BFC的高度时，浮动元素也参与计算  **如何创建BFC**      。根元素：html      。非溢出的可见元素：overflow不为visible      。设置浮动：float属性不为none      。设置定位：position为absolute或fixed      。定义成块级的非块级元素：display：inline-block、table-cell、table-caption、flex、inline-flex、grid、inline-grid  **BFC应用场景**      1.`自适应两栏布局`          。BFC的区域不会和浮动区域重叠，所以就可把侧边栏固定宽度且左浮动，而对右侧内容触发BFC，使得它的宽度触发BFC，使得它的宽度自适应该剩余宽度。（overflow：auto）    2.`清除内部浮动`          。浮动造成父级高度塌陷，因此需要将父级高度恢复正常。BFC清除浮动的原理：计算BFC的高度时，浮动元素页参与计算。只要触发父级的BFC即可( overflow: hidden;)。    3.`放置垂直margin合并`          。 BFC渲染原理之一：同一个BFC之下的垂直margin会发生合并。若将两个元素置于两个不同的BFC内，可避免这个问题。（可直接在某个元素的外层嵌套一层）  **IFC形成条件**      `块级元素中仅包含内联级别元素，注意：当出现块级元素插入时，会产生两个匿名块将父元素分割开来，产生两个IFC。`  **IFC渲染规则**      。子元素在水平方向上一个接一个排列，在垂直方向上将以容器顶部开始向下排列      。节点无法声明宽高，其中margin和padding在水平方向有效在垂直方向无效      。节点在垂直方向上以不同形式对齐      。能把在一行上的框都完全包含进去的一个矩形区域，被称为该行的线盒。线盒的宽度是由包含块和与其中的浮动来决定      。IFC 中的 line box 一般左右边贴紧其包含块，但 float 元素会优先排列      。IFC 中的 line box 高度由 line-height 计算规则来确定，同个 IFC 下的多个 line box 高度可能会不同；      。当内联级盒子的总宽度少于包含它们的 line box 时，其水平渲染规则由 text-align 属性值来决定；      。当一个内联盒子超过父元素的宽度时，它会被分割成多盒子，这些盒子分布在多个 line box 中。如果子元素未设置强制换行的情况下，inline box 将不可被分割，将会溢出父元素。  **IFC应用场景**     1.`水平居中`          当一个块要在环境中水平居中时，设置其为 inline-block 则会在外层产生 IFC，通过 text-align 则可以使其水平居中    2.`垂直居中`          创建一个 IFC，用其中一个元素撑开父元素的高度，然后设置其 vertical-align: middle，其他行内元素则可以在此父元素下垂直居中。  </code></pre><h2 id="层叠上下文"><a href="#层叠上下文" class="headerlink" title="层叠上下文"></a>层叠上下文</h2><pre><code>![avatar](https://ftp.bmp.ovh/imgs/2021/06/bffa8bc10ffaa068.webp)  `z-index值越大，距离屏幕观察者就越近，层叠等级就越高`  。z-index 能够在层叠上下文中对元素的堆叠顺序其作用是必须**配合定位**才可以  。除了 z-index 之外，一个元素在 Z 轴上的显示顺序还受层叠等级和层叠顺序影响  符合以下任一条件的元素都会产生层叠上下文：  。html文档根元素  。声明 position: absolute/relative 且 z-index 值不为 auto 的元素；  。声明 position: fixed/sticky 的元素  。flex 容器的子元素，且 z-index 值不为 auto；  。grid 容器的子元素，且 z-index 值不为 auto；  。opacity 属性值小于 1 的元素  。mix-blend-mode 属性值不为 normal 的元素  。以下任意属性值不为 none 的元素：transform、filter、perspective、clip-path、mask/mask-image/mask-border  。isolation 属性值为 isolate 的元素；  。-webkit-overflow-scrolling 属性值为 touch 的元素  。will-change 值设定了任一属性而该属性在 non-initial 值时会创建层叠上下文的元素；  。contain 属性值为 layout、paint 或包含它们其中之一的合成值（比如 contain: strict、contain: content）的元素  **层叠等级**  `层叠等级指节点在三维空间 Z 轴上的上下顺序`普通节点的层叠等级优先由其所在的层叠上下文决定，层叠等级的比较只有在当前层叠上下文中才有意义，脱离当前层叠上下文的比较就变得无意义了。      。在同一个层叠上下文中，它描述定义的是该层叠上下文中的层叠上下文元素在 Z 轴上的上下顺序；      。在其他普通元素中，它描述定义的是这些普通元素在 Z 轴上的上下顺序  **层叠顺序**      。![](https://ftp.bmp.ovh/imgs/2021/06/5690e50aae47379f.png)      越往下层叠优先级越高，视觉上的效果就是越容易被用户看到    1.层叠上下文的 border 和 background      2.z-index &lt; 0 的子节点      3.标准流内块级非定位的子节点      4.浮动非定位的子节点      5.标准流内行内非定位的子节点      6.z-index: auto/0 的子节点      7.z-index &gt; 0  **如何比较两个元素的层叠等级**      。在同一个层叠上下文中，比较两个元素就是按照上图的介绍的层叠顺序进行比较      。如果不在同一个层叠上下文中的时候，那就需要比较两个元素分别所处的层叠上下文的等级      。如果两个元素都在同一个层叠上下文，且层叠顺序相同，则在 HTML 中定义越后面的层叠等级越高。  </code></pre><h2 id="值和单位"><a href="#值和单位" class="headerlink" title="值和单位"></a>值和单位</h2><h3 id="值的类型"><a href="#值的类型" class="headerlink" title="值的类型"></a>值的类型</h3><pre><code>。 数值：长度值，用于指定例如元素width、border-width、font-size等属性的值  。 百分比：可以用于指定尺寸或长度，例如取决于父容器的 width、height 或默认的font-size；。 颜色：用于指定 background-color、color 等  。 坐标位置：以屏幕的左上角为坐标原点定位元素的位置，比如常见的 background-position、top、right、bottom 和 left 等属性  。 函数：用于指定资源路径或背景图片的渐变，比如 url()、linear-gradient() 等  </code></pre><h3 id="单位"><a href="#单位" class="headerlink" title="单位"></a>单位</h3>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;css相关总结&quot;&gt;&lt;a href=&quot;#css相关总结&quot; class=&quot;headerlink&quot; title=&quot;css相关总结&quot;&gt;&lt;/a&gt;css相关总结&lt;/h1&gt;&lt;h2 id=&quot;规则&quot;&gt;&lt;a href=&quot;#规则&quot; class=&quot;headerlink&quot; title=&quot;@</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>后台系统vue项目</title>
+    <link href="https://janeleeeee.github.io/2021/10/08/company/%E5%90%8E%E5%8F%B0%E7%B3%BB%E7%BB%9F%E5%B7%A5%E4%BD%9C%E8%AE%B0%E5%BD%95/"/>
+    <id>https://janeleeeee.github.io/2021/10/08/company/%E5%90%8E%E5%8F%B0%E7%B3%BB%E7%BB%9F%E5%B7%A5%E4%BD%9C%E8%AE%B0%E5%BD%95/</id>
+    <published>2021-10-08T14:05:31.848Z</published>
+    <updated>2021-10-10T02:35:47.926Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="vue2-x-Elementui"><a href="#vue2-x-Elementui" class="headerlink" title="vue2.x + Elementui"></a>vue2.x + Elementui</h3><h2 id="新增-编辑商品"><a href="#新增-编辑商品" class="headerlink" title="新增/编辑商品"></a>新增/编辑商品</h2><h3 id="nextTick用法"><a href="#nextTick用法" class="headerlink" title="$nextTick用法"></a>$nextTick用法</h3><pre><code>业务场景：主要用于tab切换定位</code></pre><h2 id="关于父子组件之间的传值及刷新处理"><a href="#关于父子组件之间的传值及刷新处理" class="headerlink" title="关于父子组件之间的传值及刷新处理"></a>关于父子组件之间的传值及刷新处理</h2><pre><code>业务场景：由于子组件为弹窗（dialog、drawer），由于彼此之间关联共同的状态（订单的状态），于是想要在子组件关闭后，实现刷新父组件列表的操作。实现一：父子组件传值    。子组件监听自身的show，    watch: &#123; // 监听弹窗组件的显示隐藏        show: function(val, oldVal) &#123;        this.$emit(&#39;func&#39;, val)// 触发传值父组件            &#125;,        deep: true,        immediate: true    &#125;,    。父组件调用子组件，并自定义方法刷新    &lt;after-sales-dialog ref=&quot;afterSalesDialog&quot; @func=&quot;isDialogShow&quot; /&gt;    /**    * 监听详情子组件的显示与隐藏,隐藏操作后刷新列表，更新相关订单的状态    */    isDialogShow(data) &#123;        const show = data        if (!show) &#123;            this.getTableData()        &#125;    &#125;,实现二：父子传值的另外一种方式      。父组件绑定成功方法，该方法绑定表格请求的方法          &lt;deliver-dialog ref=&quot;deliverDialog&quot; @success=&quot;getTableData&quot; /&gt;      。子组件在接口调用成功后触发成功的方法       api(params).then(res =&gt; &#123;        this.show = false        this.msgSuccess(&#39;操作成功&#39;)        this.$emit(&#39;success&#39;) //触发父组件中成功的方法      &#125;)</code></pre><h3 id="结合源码分析父子组件传值"><a href="#结合源码分析父子组件传值" class="headerlink" title="结合源码分析父子组件传值"></a>结合源码分析父子组件传值</h3>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;vue2-x-Elementui&quot;&gt;&lt;a href=&quot;#vue2-x-Elementui&quot; class=&quot;headerlink&quot; title=&quot;vue2.x + Elementui&quot;&gt;&lt;/a&gt;vue2.x + Elementui&lt;/h3&gt;&lt;h2 id=&quot;新增-编辑</summary>
+      
+    
+    
+    
+    <category term="vue业务场景使用" scheme="https://janeleeeee.github.io/categories/vue%E4%B8%9A%E5%8A%A1%E5%9C%BA%E6%99%AF%E4%BD%BF%E7%94%A8/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>砍价活动REVIEW</title>
+    <link href="https://janeleeeee.github.io/2021/10/08/company/%E7%A0%8D%E4%BB%B7%E6%B4%BB%E5%8A%A8%E5%BC%80%E5%8F%91/"/>
+    <id>https://janeleeeee.github.io/2021/10/08/company/%E7%A0%8D%E4%BB%B7%E6%B4%BB%E5%8A%A8%E5%BC%80%E5%8F%91/</id>
+    <published>2021-10-08T14:05:31.848Z</published>
+    <updated>2021-10-08T14:05:31.848Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="砍价活动"><a href="#砍价活动" class="headerlink" title="砍价活动"></a>砍价活动</h1><h3 id="遇到的问题"><a href="#遇到的问题" class="headerlink" title="遇到的问题"></a>遇到的问题</h3><p>1.onload/onshow分别处理什么场景？<br>2.针对场景，分别处理同一按钮状态？<br>3.定时器使用？<br>4.progress进度条展示？<br>5.时间戳位数问题？  </p><h2 id="1-onload-onshow处理场景"><a href="#1-onload-onshow处理场景" class="headerlink" title="1.onload/onshow处理场景"></a>1.onload/onshow处理场景</h2><pre><code>。onload接收options  。onload中处理页面展示形式（根据options接收的值，区别页面展示形式。如：发起人和助力人）  。onload页面只加载一次  。onshow页面加载多次，如出现弹窗后关闭，会先执行onshow方法，会造成以下问题：      -列表出现重复记录--》在onshow里调用列表前，pagenum=1  。onshow页面显示内容是否影响（该页面流程被打断（授权登录）后，onshow内显示加载（如商品详情）  </code></pre><h2 id="2-针对场景，分别处理同一按钮状态？"><a href="#2-针对场景，分别处理同一按钮状态？" class="headerlink" title="2.针对场景，分别处理同一按钮状态？"></a>2.针对场景，分别处理同一按钮状态？</h2><pre><code>。按钮状态分为（未开始），（砍一刀），（已参与，分享好友助力），（砍价成功，去下单），（已兑换），（已结束），（已过期），（帮助好友砍一刀）拿到条件之后对按钮状态进行批量区分    </code></pre>  <img src = 'https://s3.bmp.ovh/imgs/2021/08/d4f8f2c28e59ff0f.png' />  <pre><code>。在区分按钮显示文字的同时，同时设置按钮的背景颜色;除了分享按钮不同，遂根据btntype进行区分，满足分享的btntype满足该显示条件，其余全部使用tobargain方法进行统一判断；   </code></pre>  <img src = 'https://s3.bmp.ovh/imgs/2021/08/13fff4a67f66345e.png' />  <pre><code>。根据按钮的显示文字，调用统一方法去控制action。（利用switch；case；可点击的直接调用方法，否则直接break）  </code></pre>  <img src = 'https://s3.bmp.ovh/imgs/2021/08/d85ffb9c48526904.png' />  <h2 id="3-定时器使用？"><a href="#3-定时器使用？" class="headerlink" title="3.定时器使用？"></a>3.定时器使用？</h2><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/WindowOrWorkerGlobalScope/setInterval">https://developer.mozilla.org/zh-CN/docs/Web/API/WindowOrWorkerGlobalScope/setInterval</a>  </p><pre><code>。使用定时器，要使用一个变量去接收返回值，该返回值是时间间隔ID，唯一地标识时间间隔，可通过调用clearInterval()来删除它  。页面卸载的时候，要及时清除定时器，否则会造成内存泄漏--clearInterval(timer);timer=null  。QUESTION：页面退出后，定时器依然在跑，why？      问题分析：每生成一个定时器，都会返回一个id，也就是每次进入页面都会产生一个定时器，这就导致在页面快速切换时，可能产生新的定时器覆盖之前的，造成总有定时器在跑。      solution：在产生新的定时器前进行检查，若存在旧的定时器，就clearInterval(timer)  。当存在多个定时器的情况下，可用一个数组进行保存返回的id，然后进行统一的清理  、。倒计时（that.data.timer）--倒计时总秒数，之所以没使用入参，是因为倒计时总秒数会改变。在砍价之前， 为活动的倒计时，参与砍价后，为该发起活动助力的时效性。CountDown() &#123;  let that = this  // 防止时间间隔id被覆盖，在存在则清除  if (that.data.timer) &#123;    clearInterval(that.data.timer)  &#125;  that.data.timer = setInterval(function () &#123;    // 传入的秒数小于0 ，表示已过期return false    if (that.data.timeComputed &lt; 0) &#123;      that.setData(&#123;        rest_time: &quot;00:00:00&quot;      &#125;)      return false    &#125; else &#123;      // 计算时分秒      let maxtime = that.data.timeComputed      let hour = (Math.floor(maxtime / 3600) + &#39;&#39;).padStart(2, &#39;0&#39;),        minutes = (Math.floor(maxtime / 60) % 60 + &#39;&#39;).padStart(2, &#39;0&#39;),        seconds = (Math.floor(maxtime % 60) + &#39;&#39;).padStart(2, &#39;0&#39;)      that.setData(&#123;        rest_time: hour + &#39;:&#39; + minutes + &#39;:&#39; + seconds      &#125;)      if (hour == 0 &amp;&amp; minutes == 0 &amp;&amp; seconds == 0) &#123;        return false      &#125; else &#123;        that.data.timeComputed--;      &#125;    &#125;  &#125;,1000) //每1秒执行一次该方法  </code></pre><p>  },</p><h2 id="4-progress进度条展示？"><a href="#4-progress进度条展示？" class="headerlink" title="4.progress进度条展示？"></a>4.progress进度条展示？</h2><pre><code> &lt;progress percent=&quot;&#123;&#123;percent&#125;&#125;&quot; backgroundColor=&quot;#f3eee1&quot; stroke-width=&quot;10&quot; border-radius=&quot;10&quot;/&gt;  除了基本样式（width），progress的样式调整  .wx-progress-inner-bar &#123;    border-radius: 8rpx !important; //边界圆角      background: linear-gradient(to right, rgba(254, 128, 71, 1), rgba(254, 86, 77, 1)) !important; //进度条背景颜色&#125;</code></pre><h2 id="5-时间戳问题"><a href="#5-时间戳问题" class="headerlink" title="5.时间戳问题"></a>5.时间戳问题</h2><p>definition：从1970年1月1日（UTC/GMT的午夜）开始所经过的秒数，不考虑闰秒。  </p><pre><code>13位的时间戳，其精度是毫秒(ms)；10位的时间戳，其精度是秒(s)；13位数的时间戳转化为10位数的时间戳 ，除以1000；10位数的时间戳转化为13位数的时间戳 ，乘以1000；在javascript中， new Date().getTime() 得到的是13位的时间戳。  一般处理倒计时，会将毫秒级转换为秒级。  时间戳转年/月/日 时：分：秒    timestampToTime(timestamp) &#123;    var date = new Date(timestamp);//时间戳为10位需*1000，时间戳为13位的话不需乘1000    var Y = date.getFullYear() + &#39;/&#39;;    var M = (date.getMonth() + 1 &lt; 10 ? &#39;0&#39; + (date.getMonth() + 1) : date.getMonth() + 1) + &#39;/&#39;;    var D = (date.getDate() &lt; 10 ? &#39;0&#39; + date.getDate() : date.getDate()) + &#39; &#39;;    var h = (date.getHours() &lt; 10 ? &#39;0&#39; + date.getHours() : date.getHours()) + &#39;:&#39;;    var m = (date.getMinutes() &lt; 10 ? &#39;0&#39; + date.getMinutes() : date.getMinutes()) + &#39;:&#39;;    var s = (date.getSeconds() &lt; 10 ? &#39;0&#39; + date.getSeconds() : date.getSeconds());    let strDate = Y + M + D + h + m + s;    return strDate;  &#125;  </code></pre><h2 id="6-及时return"><a href="#6-及时return" class="headerlink" title="6.及时return"></a>6.及时return</h2><p>  <strong><img src = 'https://s3.bmp.ovh/imgs/2021/08/22a0263d65f2d70e.png' /></strong></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;砍价活动&quot;&gt;&lt;a href=&quot;#砍价活动&quot; class=&quot;headerlink&quot; title=&quot;砍价活动&quot;&gt;&lt;/a&gt;砍价活动&lt;/h1&gt;&lt;h3 id=&quot;遇到的问题&quot;&gt;&lt;a href=&quot;#遇到的问题&quot; class=&quot;headerlink&quot; title=&quot;遇到的问题&quot;&gt;</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+</feed>
