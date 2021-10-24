@@ -171,23 +171,21 @@
   </entry>
   
   <entry>
-    <title>vue自定义指令</title>
-    <link href="https://janeleeeee.github.io/2021/10/08/vue%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8C%87%E4%BB%A4/"/>
-    <id>https://janeleeeee.github.io/2021/10/08/vue%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8C%87%E4%BB%A4/</id>
+    <title>npm包管理器</title>
+    <link href="https://janeleeeee.github.io/2021/10/08/npm%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8/"/>
+    <id>https://janeleeeee.github.io/2021/10/08/npm%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8/</id>
     <published>2021-10-08T14:05:31.850Z</published>
-    <updated>2021-10-10T02:36:05.812Z</updated>
+    <updated>2021-10-08T14:05:31.850Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="vue自定义指令"><a href="#vue自定义指令" class="headerlink" title="vue自定义指令"></a>vue自定义指令</h1><h2 id="1-新建一个directive文件夹"><a href="#1-新建一个directive文件夹" class="headerlink" title="1.新建一个directive文件夹"></a>1.新建一个directive文件夹</h2><pre><code>。在该文件下内部新建一个index.js文件，目的:进行批量注册指令。  import hasRole from &#39;./hasRole&#39;import hasPermi from &#39;./hasPermi&#39;import waterMarker from &#39;./waterMarker&#39;const install = function(Vue) &#123;    Vue.directive(&#39;hasRole&#39;, hasRole)    Vue.directive(&#39;hasPermi&#39;, hasPermi)    Vue.directive(&#39;waterMarker&#39;, waterMarker)&#125;if (window.Vue) &#123;    window[&#39;hasRole&#39;] = hasRole    window[&#39;hasPermi&#39;] = hasPermi    window[&#39;waterMarker&#39;] = waterMarker    Vue.use(install); // eslint-disable-line&#125;  export default install。在该文件夹下，一个指令新建一个js文件，并导入进index文件，进行注册操作。</code></pre><h2 id="2-在main-js引入并调用"><a href="#2-在main-js引入并调用" class="headerlink" title="2.在main.js引入并调用"></a>2.在main.js引入并调用</h2><pre><code>import Directives from &#39;./JS/directives&#39;Vue.use(Directives)</code></pre><h2 id="3-使用同原生组件一样，如v-show-v-if"><a href="#3-使用同原生组件一样，如v-show-v-if" class="headerlink" title="3.使用同原生组件一样，如v-show,v-if"></a>3.使用同原生组件一样，如v-show,v-if</h2>]]></content>
+    <content type="html"><![CDATA[<h1 id="npm-包管理器"><a href="#npm-包管理器" class="headerlink" title="npm 包管理器"></a>npm 包管理器</h1><h2 id="npm"><a href="#npm" class="headerlink" title="npm"></a>npm</h2><p><code>是什么？</code>  </p><ol><li>随nodejs一起安装的包管理器</li></ol>]]></content>
     
     
       
       
-    <summary type="html">&lt;h1 id=&quot;vue自定义指令&quot;&gt;&lt;a href=&quot;#vue自定义指令&quot; class=&quot;headerlink&quot; title=&quot;vue自定义指令&quot;&gt;&lt;/a&gt;vue自定义指令&lt;/h1&gt;&lt;h2 id=&quot;1-新建一个directive文件夹&quot;&gt;&lt;a href=&quot;#1-新建一个direc</summary>
+    <summary type="html">&lt;h1 id=&quot;npm-包管理器&quot;&gt;&lt;a href=&quot;#npm-包管理器&quot; class=&quot;headerlink&quot; title=&quot;npm 包管理器&quot;&gt;&lt;/a&gt;npm 包管理器&lt;/h1&gt;&lt;h2 id=&quot;npm&quot;&gt;&lt;a href=&quot;#npm&quot; class=&quot;headerlink&quot; ti</summary>
       
     
     
-    
-    <category term="vue业务场景使用" scheme="https://janeleeeee.github.io/categories/vue%E4%B8%9A%E5%8A%A1%E5%9C%BA%E6%99%AF%E4%BD%BF%E7%94%A8/"/>
     
     
   </entry>
@@ -213,21 +211,23 @@
   </entry>
   
   <entry>
-    <title>npm包管理器</title>
-    <link href="https://janeleeeee.github.io/2021/10/08/npm%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8/"/>
-    <id>https://janeleeeee.github.io/2021/10/08/npm%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8/</id>
+    <title>vue自定义指令</title>
+    <link href="https://janeleeeee.github.io/2021/10/08/vue%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8C%87%E4%BB%A4/"/>
+    <id>https://janeleeeee.github.io/2021/10/08/vue%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8C%87%E4%BB%A4/</id>
     <published>2021-10-08T14:05:31.850Z</published>
-    <updated>2021-10-08T14:05:31.850Z</updated>
+    <updated>2021-10-10T02:36:05.812Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="npm-包管理器"><a href="#npm-包管理器" class="headerlink" title="npm 包管理器"></a>npm 包管理器</h1><h2 id="npm"><a href="#npm" class="headerlink" title="npm"></a>npm</h2><p><code>是什么？</code>  </p><ol><li>随nodejs一起安装的包管理器</li></ol>]]></content>
+    <content type="html"><![CDATA[<h1 id="vue自定义指令"><a href="#vue自定义指令" class="headerlink" title="vue自定义指令"></a>vue自定义指令</h1><h2 id="1-新建一个directive文件夹"><a href="#1-新建一个directive文件夹" class="headerlink" title="1.新建一个directive文件夹"></a>1.新建一个directive文件夹</h2><pre><code>。在该文件下内部新建一个index.js文件，目的:进行批量注册指令。  import hasRole from &#39;./hasRole&#39;import hasPermi from &#39;./hasPermi&#39;import waterMarker from &#39;./waterMarker&#39;const install = function(Vue) &#123;    Vue.directive(&#39;hasRole&#39;, hasRole)    Vue.directive(&#39;hasPermi&#39;, hasPermi)    Vue.directive(&#39;waterMarker&#39;, waterMarker)&#125;if (window.Vue) &#123;    window[&#39;hasRole&#39;] = hasRole    window[&#39;hasPermi&#39;] = hasPermi    window[&#39;waterMarker&#39;] = waterMarker    Vue.use(install); // eslint-disable-line&#125;  export default install。在该文件夹下，一个指令新建一个js文件，并导入进index文件，进行注册操作。</code></pre><h2 id="2-在main-js引入并调用"><a href="#2-在main-js引入并调用" class="headerlink" title="2.在main.js引入并调用"></a>2.在main.js引入并调用</h2><pre><code>import Directives from &#39;./JS/directives&#39;Vue.use(Directives)</code></pre><h2 id="3-使用同原生组件一样，如v-show-v-if"><a href="#3-使用同原生组件一样，如v-show-v-if" class="headerlink" title="3.使用同原生组件一样，如v-show,v-if"></a>3.使用同原生组件一样，如v-show,v-if</h2>]]></content>
     
     
       
       
-    <summary type="html">&lt;h1 id=&quot;npm-包管理器&quot;&gt;&lt;a href=&quot;#npm-包管理器&quot; class=&quot;headerlink&quot; title=&quot;npm 包管理器&quot;&gt;&lt;/a&gt;npm 包管理器&lt;/h1&gt;&lt;h2 id=&quot;npm&quot;&gt;&lt;a href=&quot;#npm&quot; class=&quot;headerlink&quot; ti</summary>
+    <summary type="html">&lt;h1 id=&quot;vue自定义指令&quot;&gt;&lt;a href=&quot;#vue自定义指令&quot; class=&quot;headerlink&quot; title=&quot;vue自定义指令&quot;&gt;&lt;/a&gt;vue自定义指令&lt;/h1&gt;&lt;h2 id=&quot;1-新建一个directive文件夹&quot;&gt;&lt;a href=&quot;#1-新建一个direc</summary>
       
     
     
+    
+    <category term="vue业务场景使用" scheme="https://janeleeeee.github.io/categories/vue%E4%B8%9A%E5%8A%A1%E5%9C%BA%E6%99%AF%E4%BD%BF%E7%94%A8/"/>
     
     
   </entry>
@@ -293,26 +293,6 @@
   </entry>
   
   <entry>
-    <title>砍价活动REVIEW</title>
-    <link href="https://janeleeeee.github.io/2021/10/08/company/%E7%A0%8D%E4%BB%B7%E6%B4%BB%E5%8A%A8%E5%BC%80%E5%8F%91/"/>
-    <id>https://janeleeeee.github.io/2021/10/08/company/%E7%A0%8D%E4%BB%B7%E6%B4%BB%E5%8A%A8%E5%BC%80%E5%8F%91/</id>
-    <published>2021-10-08T14:05:31.848Z</published>
-    <updated>2021-10-08T14:05:31.848Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="砍价活动"><a href="#砍价活动" class="headerlink" title="砍价活动"></a>砍价活动</h1><h3 id="遇到的问题"><a href="#遇到的问题" class="headerlink" title="遇到的问题"></a>遇到的问题</h3><p>1.onload/onshow分别处理什么场景？<br>2.针对场景，分别处理同一按钮状态？<br>3.定时器使用？<br>4.progress进度条展示？<br>5.时间戳位数问题？  </p><h2 id="1-onload-onshow处理场景"><a href="#1-onload-onshow处理场景" class="headerlink" title="1.onload/onshow处理场景"></a>1.onload/onshow处理场景</h2><pre><code>。onload接收options  。onload中处理页面展示形式（根据options接收的值，区别页面展示形式。如：发起人和助力人）  。onload页面只加载一次  。onshow页面加载多次，如出现弹窗后关闭，会先执行onshow方法，会造成以下问题：      -列表出现重复记录--》在onshow里调用列表前，pagenum=1  。onshow页面显示内容是否影响（该页面流程被打断（授权登录）后，onshow内显示加载（如商品详情）  </code></pre><h2 id="2-针对场景，分别处理同一按钮状态？"><a href="#2-针对场景，分别处理同一按钮状态？" class="headerlink" title="2.针对场景，分别处理同一按钮状态？"></a>2.针对场景，分别处理同一按钮状态？</h2><pre><code>。按钮状态分为（未开始），（砍一刀），（已参与，分享好友助力），（砍价成功，去下单），（已兑换），（已结束），（已过期），（帮助好友砍一刀）拿到条件之后对按钮状态进行批量区分    </code></pre>  <img src = 'https://s3.bmp.ovh/imgs/2021/08/d4f8f2c28e59ff0f.png' />  <pre><code>。在区分按钮显示文字的同时，同时设置按钮的背景颜色;除了分享按钮不同，遂根据btntype进行区分，满足分享的btntype满足该显示条件，其余全部使用tobargain方法进行统一判断；   </code></pre>  <img src = 'https://s3.bmp.ovh/imgs/2021/08/13fff4a67f66345e.png' />  <pre><code>。根据按钮的显示文字，调用统一方法去控制action。（利用switch；case；可点击的直接调用方法，否则直接break）  </code></pre>  <img src = 'https://s3.bmp.ovh/imgs/2021/08/d85ffb9c48526904.png' />  <h2 id="3-定时器使用？"><a href="#3-定时器使用？" class="headerlink" title="3.定时器使用？"></a>3.定时器使用？</h2><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/WindowOrWorkerGlobalScope/setInterval">https://developer.mozilla.org/zh-CN/docs/Web/API/WindowOrWorkerGlobalScope/setInterval</a>  </p><pre><code>。使用定时器，要使用一个变量去接收返回值，该返回值是时间间隔ID，唯一地标识时间间隔，可通过调用clearInterval()来删除它  。页面卸载的时候，要及时清除定时器，否则会造成内存泄漏--clearInterval(timer);timer=null  。QUESTION：页面退出后，定时器依然在跑，why？      问题分析：每生成一个定时器，都会返回一个id，也就是每次进入页面都会产生一个定时器，这就导致在页面快速切换时，可能产生新的定时器覆盖之前的，造成总有定时器在跑。      solution：在产生新的定时器前进行检查，若存在旧的定时器，就clearInterval(timer)  。当存在多个定时器的情况下，可用一个数组进行保存返回的id，然后进行统一的清理  、。倒计时（that.data.timer）--倒计时总秒数，之所以没使用入参，是因为倒计时总秒数会改变。在砍价之前， 为活动的倒计时，参与砍价后，为该发起活动助力的时效性。CountDown() &#123;  let that = this  // 防止时间间隔id被覆盖，在存在则清除  if (that.data.timer) &#123;    clearInterval(that.data.timer)  &#125;  that.data.timer = setInterval(function () &#123;    // 传入的秒数小于0 ，表示已过期return false    if (that.data.timeComputed &lt; 0) &#123;      that.setData(&#123;        rest_time: &quot;00:00:00&quot;      &#125;)      return false    &#125; else &#123;      // 计算时分秒      let maxtime = that.data.timeComputed      let hour = (Math.floor(maxtime / 3600) + &#39;&#39;).padStart(2, &#39;0&#39;),        minutes = (Math.floor(maxtime / 60) % 60 + &#39;&#39;).padStart(2, &#39;0&#39;),        seconds = (Math.floor(maxtime % 60) + &#39;&#39;).padStart(2, &#39;0&#39;)      that.setData(&#123;        rest_time: hour + &#39;:&#39; + minutes + &#39;:&#39; + seconds      &#125;)      if (hour == 0 &amp;&amp; minutes == 0 &amp;&amp; seconds == 0) &#123;        return false      &#125; else &#123;        that.data.timeComputed--;      &#125;    &#125;  &#125;,1000) //每1秒执行一次该方法  </code></pre><p>  },</p><h2 id="4-progress进度条展示？"><a href="#4-progress进度条展示？" class="headerlink" title="4.progress进度条展示？"></a>4.progress进度条展示？</h2><pre><code> &lt;progress percent=&quot;&#123;&#123;percent&#125;&#125;&quot; backgroundColor=&quot;#f3eee1&quot; stroke-width=&quot;10&quot; border-radius=&quot;10&quot;/&gt;  除了基本样式（width），progress的样式调整  .wx-progress-inner-bar &#123;    border-radius: 8rpx !important; //边界圆角      background: linear-gradient(to right, rgba(254, 128, 71, 1), rgba(254, 86, 77, 1)) !important; //进度条背景颜色&#125;</code></pre><h2 id="5-时间戳问题"><a href="#5-时间戳问题" class="headerlink" title="5.时间戳问题"></a>5.时间戳问题</h2><p>definition：从1970年1月1日（UTC/GMT的午夜）开始所经过的秒数，不考虑闰秒。  </p><pre><code>13位的时间戳，其精度是毫秒(ms)；10位的时间戳，其精度是秒(s)；13位数的时间戳转化为10位数的时间戳 ，除以1000；10位数的时间戳转化为13位数的时间戳 ，乘以1000；在javascript中， new Date().getTime() 得到的是13位的时间戳。  一般处理倒计时，会将毫秒级转换为秒级。  时间戳转年/月/日 时：分：秒    timestampToTime(timestamp) &#123;    var date = new Date(timestamp);//时间戳为10位需*1000，时间戳为13位的话不需乘1000    var Y = date.getFullYear() + &#39;/&#39;;    var M = (date.getMonth() + 1 &lt; 10 ? &#39;0&#39; + (date.getMonth() + 1) : date.getMonth() + 1) + &#39;/&#39;;    var D = (date.getDate() &lt; 10 ? &#39;0&#39; + date.getDate() : date.getDate()) + &#39; &#39;;    var h = (date.getHours() &lt; 10 ? &#39;0&#39; + date.getHours() : date.getHours()) + &#39;:&#39;;    var m = (date.getMinutes() &lt; 10 ? &#39;0&#39; + date.getMinutes() : date.getMinutes()) + &#39;:&#39;;    var s = (date.getSeconds() &lt; 10 ? &#39;0&#39; + date.getSeconds() : date.getSeconds());    let strDate = Y + M + D + h + m + s;    return strDate;  &#125;  </code></pre><h2 id="6-及时return"><a href="#6-及时return" class="headerlink" title="6.及时return"></a>6.及时return</h2><p>  <strong><img src = 'https://s3.bmp.ovh/imgs/2021/08/22a0263d65f2d70e.png' /></strong></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;砍价活动&quot;&gt;&lt;a href=&quot;#砍价活动&quot; class=&quot;headerlink&quot; title=&quot;砍价活动&quot;&gt;&lt;/a&gt;砍价活动&lt;/h1&gt;&lt;h3 id=&quot;遇到的问题&quot;&gt;&lt;a href=&quot;#遇到的问题&quot; class=&quot;headerlink&quot; title=&quot;遇到的问题&quot;&gt;</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
     <title>后台系统vue项目</title>
     <link href="https://janeleeeee.github.io/2021/10/08/company/%E5%90%8E%E5%8F%B0%E7%B3%BB%E7%BB%9F%E5%B7%A5%E4%BD%9C%E8%AE%B0%E5%BD%95/"/>
     <id>https://janeleeeee.github.io/2021/10/08/company/%E5%90%8E%E5%8F%B0%E7%B3%BB%E7%BB%9F%E5%B7%A5%E4%BD%9C%E8%AE%B0%E5%BD%95/</id>
@@ -330,6 +310,26 @@
     
     
     <category term="vue业务场景使用" scheme="https://janeleeeee.github.io/categories/vue%E4%B8%9A%E5%8A%A1%E5%9C%BA%E6%99%AF%E4%BD%BF%E7%94%A8/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>砍价活动REVIEW</title>
+    <link href="https://janeleeeee.github.io/2021/10/08/company/%E7%A0%8D%E4%BB%B7%E6%B4%BB%E5%8A%A8%E5%BC%80%E5%8F%91/"/>
+    <id>https://janeleeeee.github.io/2021/10/08/company/%E7%A0%8D%E4%BB%B7%E6%B4%BB%E5%8A%A8%E5%BC%80%E5%8F%91/</id>
+    <published>2021-10-08T14:05:31.848Z</published>
+    <updated>2021-10-08T14:05:31.848Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="砍价活动"><a href="#砍价活动" class="headerlink" title="砍价活动"></a>砍价活动</h1><h3 id="遇到的问题"><a href="#遇到的问题" class="headerlink" title="遇到的问题"></a>遇到的问题</h3><p>1.onload/onshow分别处理什么场景？<br>2.针对场景，分别处理同一按钮状态？<br>3.定时器使用？<br>4.progress进度条展示？<br>5.时间戳位数问题？  </p><h2 id="1-onload-onshow处理场景"><a href="#1-onload-onshow处理场景" class="headerlink" title="1.onload/onshow处理场景"></a>1.onload/onshow处理场景</h2><pre><code>。onload接收options  。onload中处理页面展示形式（根据options接收的值，区别页面展示形式。如：发起人和助力人）  。onload页面只加载一次  。onshow页面加载多次，如出现弹窗后关闭，会先执行onshow方法，会造成以下问题：      -列表出现重复记录--》在onshow里调用列表前，pagenum=1  。onshow页面显示内容是否影响（该页面流程被打断（授权登录）后，onshow内显示加载（如商品详情）  </code></pre><h2 id="2-针对场景，分别处理同一按钮状态？"><a href="#2-针对场景，分别处理同一按钮状态？" class="headerlink" title="2.针对场景，分别处理同一按钮状态？"></a>2.针对场景，分别处理同一按钮状态？</h2><pre><code>。按钮状态分为（未开始），（砍一刀），（已参与，分享好友助力），（砍价成功，去下单），（已兑换），（已结束），（已过期），（帮助好友砍一刀）拿到条件之后对按钮状态进行批量区分    </code></pre>  <img src = 'https://s3.bmp.ovh/imgs/2021/08/d4f8f2c28e59ff0f.png' />  <pre><code>。在区分按钮显示文字的同时，同时设置按钮的背景颜色;除了分享按钮不同，遂根据btntype进行区分，满足分享的btntype满足该显示条件，其余全部使用tobargain方法进行统一判断；   </code></pre>  <img src = 'https://s3.bmp.ovh/imgs/2021/08/13fff4a67f66345e.png' />  <pre><code>。根据按钮的显示文字，调用统一方法去控制action。（利用switch；case；可点击的直接调用方法，否则直接break）  </code></pre>  <img src = 'https://s3.bmp.ovh/imgs/2021/08/d85ffb9c48526904.png' />  <h2 id="3-定时器使用？"><a href="#3-定时器使用？" class="headerlink" title="3.定时器使用？"></a>3.定时器使用？</h2><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/WindowOrWorkerGlobalScope/setInterval">https://developer.mozilla.org/zh-CN/docs/Web/API/WindowOrWorkerGlobalScope/setInterval</a>  </p><pre><code>。使用定时器，要使用一个变量去接收返回值，该返回值是时间间隔ID，唯一地标识时间间隔，可通过调用clearInterval()来删除它  。页面卸载的时候，要及时清除定时器，否则会造成内存泄漏--clearInterval(timer);timer=null  。QUESTION：页面退出后，定时器依然在跑，why？      问题分析：每生成一个定时器，都会返回一个id，也就是每次进入页面都会产生一个定时器，这就导致在页面快速切换时，可能产生新的定时器覆盖之前的，造成总有定时器在跑。      solution：在产生新的定时器前进行检查，若存在旧的定时器，就clearInterval(timer)  。当存在多个定时器的情况下，可用一个数组进行保存返回的id，然后进行统一的清理  、。倒计时（that.data.timer）--倒计时总秒数，之所以没使用入参，是因为倒计时总秒数会改变。在砍价之前， 为活动的倒计时，参与砍价后，为该发起活动助力的时效性。CountDown() &#123;  let that = this  // 防止时间间隔id被覆盖，在存在则清除  if (that.data.timer) &#123;    clearInterval(that.data.timer)  &#125;  that.data.timer = setInterval(function () &#123;    // 传入的秒数小于0 ，表示已过期return false    if (that.data.timeComputed &lt; 0) &#123;      that.setData(&#123;        rest_time: &quot;00:00:00&quot;      &#125;)      return false    &#125; else &#123;      // 计算时分秒      let maxtime = that.data.timeComputed      let hour = (Math.floor(maxtime / 3600) + &#39;&#39;).padStart(2, &#39;0&#39;),        minutes = (Math.floor(maxtime / 60) % 60 + &#39;&#39;).padStart(2, &#39;0&#39;),        seconds = (Math.floor(maxtime % 60) + &#39;&#39;).padStart(2, &#39;0&#39;)      that.setData(&#123;        rest_time: hour + &#39;:&#39; + minutes + &#39;:&#39; + seconds      &#125;)      if (hour == 0 &amp;&amp; minutes == 0 &amp;&amp; seconds == 0) &#123;        return false      &#125; else &#123;        that.data.timeComputed--;      &#125;    &#125;  &#125;,1000) //每1秒执行一次该方法  </code></pre><p>  },</p><h2 id="4-progress进度条展示？"><a href="#4-progress进度条展示？" class="headerlink" title="4.progress进度条展示？"></a>4.progress进度条展示？</h2><pre><code> &lt;progress percent=&quot;&#123;&#123;percent&#125;&#125;&quot; backgroundColor=&quot;#f3eee1&quot; stroke-width=&quot;10&quot; border-radius=&quot;10&quot;/&gt;  除了基本样式（width），progress的样式调整  .wx-progress-inner-bar &#123;    border-radius: 8rpx !important; //边界圆角      background: linear-gradient(to right, rgba(254, 128, 71, 1), rgba(254, 86, 77, 1)) !important; //进度条背景颜色&#125;</code></pre><h2 id="5-时间戳问题"><a href="#5-时间戳问题" class="headerlink" title="5.时间戳问题"></a>5.时间戳问题</h2><p>definition：从1970年1月1日（UTC/GMT的午夜）开始所经过的秒数，不考虑闰秒。  </p><pre><code>13位的时间戳，其精度是毫秒(ms)；10位的时间戳，其精度是秒(s)；13位数的时间戳转化为10位数的时间戳 ，除以1000；10位数的时间戳转化为13位数的时间戳 ，乘以1000；在javascript中， new Date().getTime() 得到的是13位的时间戳。  一般处理倒计时，会将毫秒级转换为秒级。  时间戳转年/月/日 时：分：秒    timestampToTime(timestamp) &#123;    var date = new Date(timestamp);//时间戳为10位需*1000，时间戳为13位的话不需乘1000    var Y = date.getFullYear() + &#39;/&#39;;    var M = (date.getMonth() + 1 &lt; 10 ? &#39;0&#39; + (date.getMonth() + 1) : date.getMonth() + 1) + &#39;/&#39;;    var D = (date.getDate() &lt; 10 ? &#39;0&#39; + date.getDate() : date.getDate()) + &#39; &#39;;    var h = (date.getHours() &lt; 10 ? &#39;0&#39; + date.getHours() : date.getHours()) + &#39;:&#39;;    var m = (date.getMinutes() &lt; 10 ? &#39;0&#39; + date.getMinutes() : date.getMinutes()) + &#39;:&#39;;    var s = (date.getSeconds() &lt; 10 ? &#39;0&#39; + date.getSeconds() : date.getSeconds());    let strDate = Y + M + D + h + m + s;    return strDate;  &#125;  </code></pre><h2 id="6-及时return"><a href="#6-及时return" class="headerlink" title="6.及时return"></a>6.及时return</h2><p>  <strong><img src = 'https://s3.bmp.ovh/imgs/2021/08/22a0263d65f2d70e.png' /></strong></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;砍价活动&quot;&gt;&lt;a href=&quot;#砍价活动&quot; class=&quot;headerlink&quot; title=&quot;砍价活动&quot;&gt;&lt;/a&gt;砍价活动&lt;/h1&gt;&lt;h3 id=&quot;遇到的问题&quot;&gt;&lt;a href=&quot;#遇到的问题&quot; class=&quot;headerlink&quot; title=&quot;遇到的问题&quot;&gt;</summary>
+      
+    
+    
     
     
   </entry>
