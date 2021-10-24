@@ -6,7 +6,7 @@
   <link href="https://janeleeeee.github.io/atom.xml" rel="self"/>
   
   <link href="https://janeleeeee.github.io/"/>
-  <updated>2021-10-24T11:55:11.020Z</updated>
+  <updated>2021-10-24T13:32:03.422Z</updated>
   <id>https://janeleeeee.github.io/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://janeleeeee.github.io/2021/10/24/%E5%89%8D%E7%AB%AF%E5%B8%B8%E8%A7%81%E4%B8%9A%E5%8A%A1%E5%9C%BA%E6%99%AF/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E5%8F%8A%E4%B8%8B%E8%BD%BD/"/>
     <id>https://janeleeeee.github.io/2021/10/24/%E5%89%8D%E7%AB%AF%E5%B8%B8%E8%A7%81%E4%B8%9A%E5%8A%A1%E5%9C%BA%E6%99%AF/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E5%8F%8A%E4%B8%8B%E8%BD%BD/</id>
     <published>2021-10-24T07:20:51.413Z</published>
-    <updated>2021-10-24T11:55:11.020Z</updated>
+    <updated>2021-10-24T13:32:03.422Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="上传"><a href="#上传" class="headerlink" title="上传"></a>上传</h1><p><code>底层的上传文件的方式就是form表单，上传文件时将enctype设置成multipart/form-data</code><br>原始form表单不存在浏览器的兼容问题，所有浏览器都支持，但体验感比较差。input必须要设置name属性，否则数据无法发送。  </p><p><code>对于服务端提供上传接口，需要设置相应的请求头，前端提交的是formData形式的文件数据</code><br>    对于业务中进行上传业务时，使用post请求，后端要求除了要上传文件之外，还要传输一些参数。进行接口封装的时候，除了post请求，除了接收data参数，同时还要接收params参数。<br>    对于file一般作为data进行传送，对于其他参数，一般用params传递，所以两者拥有不同的请求头。当然，这种类似get请求的参数传递，最终传递的params最后也都会拼接在路径后面。</p><h1 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h1><p><code>方式一：表单form提交</code>  </p>]]></content>
+    <content type="html"><![CDATA[<h1 id="上传"><a href="#上传" class="headerlink" title="上传"></a>上传</h1><p><code>底层的上传文件的方式就是form表单，上传文件时将enctype设置成multipart/form-data</code><br>原始form表单不存在浏览器的兼容问题，所有浏览器都支持，但体验感比较差。input必须要设置name属性，否则数据无法发送。  </p><p><code>对于服务端提供上传接口，需要设置相应的请求头，前端提交的是formData形式的文件数据</code><br>    对于业务中进行上传业务时，使用post请求，后端要求除了要上传文件之外，还要传输一些参数。进行接口封装的时候，除了post请求，除了接收data参数，同时还要接收params参数。<br>    对于file一般作为data进行传送，对于其他参数，一般用params传递，所以两者拥有不同的请求头。当然，这种类似get请求的参数传递，最终传递的params最后也都会拼接在路径后面。</p><h1 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h1><p><code>方式一：表单form提交</code><br>    利用表单提交的功能来实现文件的下载。<br>    优点：兼容性比较好，不会出现url长度限制的问题。<br>    缺点：无法知晓下载的进度，无法直接下载浏览器可直接预览的文件类型。<br>    适用场景：使用传统的表单请求的方式，且无需下载一些浏览器可直接预览的文件。</p><p><code>方式二：使用window.open()或者window.location.href</code><br>    相比于其他方式而言，这种方式最为直接。<br>    类似于a标签访问下载链接<br>    接收的参数是url（文件地址或网页地址）<br>    缺点：<br>        1.会出现url长度的限制<br>        2.需要注意url编码问题<br>        3.浏览器可直接浏览的文件类型不提供下载，即若浏览器可以直接预览该文件，则直接打开新页面预览，不会启用下载功能。<br>        4.无法知道下载的进度<br>    使用场景：在已经知道当前的下载的文件的路径，window.open()可直接将参数的请求路径和参数作为其参数发送请求，若为可直接浏览的文件类型，则直接新开一个页面进行预览。  </p><p><code>方式三：a标签的download属性</code><br>    download属性是H5新增属性，可能存在兼容性问题（非chrome浏览器支持性可能不好）<br>    优点：可以解决不能直接下载浏览器可浏览的文件。<br>    缺点：<br>    1.必须要提前知道下载的文件地址<br>    2.不能下载跨域下的浏览器可浏览的文件<br>    3.有兼容性问题，特别是IE<br>    4.不能进行鉴权<br>    使用场景：不用进行鉴权，且不考虑兼容性问题。使用较少。</p><p><code>方式四：利用blob对象</code><br>    除了可以利用已知的文件地址路径进行下载外，还能通过发送ajax请求api获取文件流进行下载。利用blob对象可以将文件流转换为Blob二进制对象。<br>    实现思路：<br>    发请求获取二进制数据，转化为 Blob 对象，利用 URL.createObjectUrl 生成 url 地址，赋值在 a 标签的 href 属性上，结合 download 进行下载。<br>    适用场景：在确定后端返回的数据类型是文件流的前提下，需要利用其进行转成url路径。</p>]]></content>
     
     
       
@@ -191,26 +191,6 @@
   </entry>
   
   <entry>
-    <title>微信小程序自定义导航栏适配</title>
-    <link href="https://janeleeeee.github.io/2021/10/08/wechat-%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AF%BC%E8%88%AA%E6%A0%8F/"/>
-    <id>https://janeleeeee.github.io/2021/10/08/wechat-%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AF%BC%E8%88%AA%E6%A0%8F/</id>
-    <published>2021-10-08T14:05:31.850Z</published>
-    <updated>2021-10-08T14:05:31.851Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="自定义导航栏"><a href="#自定义导航栏" class="headerlink" title="自定义导航栏"></a>自定义导航栏</h1><h2 id="基本信息"><a href="#基本信息" class="headerlink" title="基本信息"></a>基本信息</h2><pre><code>。 Android和iOS不同：在顶部和胶囊按钮之间距离相差6pt（Android胶囊和导航栏之间存在6pt空隙）。 Android和iOS相同：胶囊的按钮高度为32pt  。导航栏 = 状态栏（不定） + 标题栏  </code></pre><h2 id="main-point"><a href="#main-point" class="headerlink" title="main point"></a>main point</h2><pre><code>。 导航栏高度 =  胶囊按钮高度 + 状态栏到胶囊按钮间距  。 胶囊按钮是原生组件，单位为px，</code></pre>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;自定义导航栏&quot;&gt;&lt;a href=&quot;#自定义导航栏&quot; class=&quot;headerlink&quot; title=&quot;自定义导航栏&quot;&gt;&lt;/a&gt;自定义导航栏&lt;/h1&gt;&lt;h2 id=&quot;基本信息&quot;&gt;&lt;a href=&quot;#基本信息&quot; class=&quot;headerlink&quot; title=&quot;基</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
     <title>vue自定义指令</title>
     <link href="https://janeleeeee.github.io/2021/10/08/vue%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8C%87%E4%BB%A4/"/>
     <id>https://janeleeeee.github.io/2021/10/08/vue%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8C%87%E4%BB%A4/</id>
@@ -228,6 +208,26 @@
     
     
     <category term="vue业务场景使用" scheme="https://janeleeeee.github.io/categories/vue%E4%B8%9A%E5%8A%A1%E5%9C%BA%E6%99%AF%E4%BD%BF%E7%94%A8/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>微信小程序自定义导航栏适配</title>
+    <link href="https://janeleeeee.github.io/2021/10/08/wechat-%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AF%BC%E8%88%AA%E6%A0%8F/"/>
+    <id>https://janeleeeee.github.io/2021/10/08/wechat-%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AF%BC%E8%88%AA%E6%A0%8F/</id>
+    <published>2021-10-08T14:05:31.850Z</published>
+    <updated>2021-10-08T14:05:31.851Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="自定义导航栏"><a href="#自定义导航栏" class="headerlink" title="自定义导航栏"></a>自定义导航栏</h1><h2 id="基本信息"><a href="#基本信息" class="headerlink" title="基本信息"></a>基本信息</h2><pre><code>。 Android和iOS不同：在顶部和胶囊按钮之间距离相差6pt（Android胶囊和导航栏之间存在6pt空隙）。 Android和iOS相同：胶囊的按钮高度为32pt  。导航栏 = 状态栏（不定） + 标题栏  </code></pre><h2 id="main-point"><a href="#main-point" class="headerlink" title="main point"></a>main point</h2><pre><code>。 导航栏高度 =  胶囊按钮高度 + 状态栏到胶囊按钮间距  。 胶囊按钮是原生组件，单位为px，</code></pre>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;自定义导航栏&quot;&gt;&lt;a href=&quot;#自定义导航栏&quot; class=&quot;headerlink&quot; title=&quot;自定义导航栏&quot;&gt;&lt;/a&gt;自定义导航栏&lt;/h1&gt;&lt;h2 id=&quot;基本信息&quot;&gt;&lt;a href=&quot;#基本信息&quot; class=&quot;headerlink&quot; title=&quot;基</summary>
+      
+    
+    
     
     
   </entry>
