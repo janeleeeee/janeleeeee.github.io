@@ -58,14 +58,14 @@
   </url>
   
   <url>
-    <loc>https://janeleeeee.github.io/2021/10/08/hello-world/</loc>
+    <loc>https://janeleeeee.github.io/2021/10/08/npm%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8/</loc>
     
     <lastmod>2021-10-08</lastmod>
     
   </url>
   
   <url>
-    <loc>https://janeleeeee.github.io/2021/10/08/npm%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8/</loc>
+    <loc>https://janeleeeee.github.io/2021/10/08/hello-world/</loc>
     
     <lastmod>2021-10-08</lastmod>
     
@@ -102,7 +102,7 @@
 
   <url>
     <loc>https://janeleeeee.github.io/</loc>
-    <lastmod>2021-10-23</lastmod>
+    <lastmod>2021-10-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -112,28 +112,28 @@
   
   <url>
     <loc>https://janeleeeee.github.io/categories/vue%E4%B8%9A%E5%8A%A1%E5%9C%BA%E6%99%AF%E4%BD%BF%E7%94%A8/</loc>
-    <lastmod>2021-10-23</lastmod>
+    <lastmod>2021-10-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://janeleeeee.github.io/categories/%E9%A1%B9%E7%9B%AE%E5%AD%A6%E4%B9%A0%E5%A4%8D%E7%9B%98/</loc>
-    <lastmod>2021-10-23</lastmod>
+    <lastmod>2021-10-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://janeleeeee.github.io/categories/%E5%8F%AF%E8%A7%86%E5%8C%96/</loc>
-    <lastmod>2021-10-23</lastmod>
+    <lastmod>2021-10-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://janeleeeee.github.io/categories/hexo%E6%90%AD%E5%BB%BAFAQ/</loc>
-    <lastmod>2021-10-23</lastmod>
+    <lastmod>2021-10-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
