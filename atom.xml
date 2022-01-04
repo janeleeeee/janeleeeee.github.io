@@ -6,7 +6,7 @@
   <link href="https://janeleeeee.github.io/atom.xml" rel="self"/>
   
   <link href="https://janeleeeee.github.io/"/>
-  <updated>2021-10-24T13:47:39.389Z</updated>
+  <updated>2021-11-21T05:27:55.485Z</updated>
   <id>https://janeleeeee.github.io/</id>
   
   <author>
@@ -17,13 +17,50 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>关于调试</title>
+    <link href="https://janeleeeee.github.io/2021/11/21/%E5%89%8D%E7%AB%AF%E5%B7%A5%E5%85%B7/%E5%85%B3%E4%BA%8E%E8%B0%83%E8%AF%95/"/>
+    <id>https://janeleeeee.github.io/2021/11/21/%E5%89%8D%E7%AB%AF%E5%B7%A5%E5%85%B7/%E5%85%B3%E4%BA%8E%E8%B0%83%E8%AF%95/</id>
+    <published>2021-11-21T05:26:58.922Z</published>
+    <updated>2021-11-21T05:27:55.485Z</updated>
+    
+    
+    
+    
+    <category term="工具类" scheme="https://janeleeeee.github.io/categories/%E5%B7%A5%E5%85%B7%E7%B1%BB/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>父组件获取子组件实例</title>
+    <link href="https://janeleeeee.github.io/2021/11/20/vue%E4%BD%93%E7%B3%BB/%E8%B0%83%E7%94%A8%E5%AD%90%E7%BB%84%E4%BB%B6%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/"/>
+    <id>https://janeleeeee.github.io/2021/11/20/vue%E4%BD%93%E7%B3%BB/%E8%B0%83%E7%94%A8%E5%AD%90%E7%BB%84%E4%BB%B6%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/</id>
+    <published>2021-11-20T08:52:03.347Z</published>
+    <updated>2021-11-20T10:32:01.039Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="获取子组件实例报错undefined"><a href="#获取子组件实例报错undefined" class="headerlink" title="获取子组件实例报错undefined"></a>获取子组件实例报错undefined</h2><pre><code>Q：很多业务场景下，都会通过使用this.$refs.xxx去获取子组件的实例，但是若该子组件依赖父组件显示或者隐藏（v-if、v-show）等，且在mounted生命周期内去调用（this.$refs.xxx),这个时候就会报undefined的错误。  A：关于 ref 注册时间的重要说明：因为 ref 本身是作为渲染结果被创建的，在初始渲染的时候你不能访问它们 - 它们还不存在！      $refs 也不是响应式的，因此你不应该试图用它在模板中做数据绑定。      在mounted生命周期内去获取实例，这个时候ref因为还未拿到最终的渲染结果而未注册，所以在dom节点注册拿到之前操作dom时，需要使用this.$nextTick。  </code></pre>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;获取子组件实例报错undefined&quot;&gt;&lt;a href=&quot;#获取子组件实例报错undefined&quot; class=&quot;headerlink&quot; title=&quot;获取子组件实例报错undefined&quot;&gt;&lt;/a&gt;获取子组件实例报错undefined&lt;/h2&gt;&lt;pre&gt;&lt;cod</summary>
+      
+    
+    
+    
+    <category term="vue业务场景使用" scheme="https://janeleeeee.github.io/categories/vue%E4%B8%9A%E5%8A%A1%E5%9C%BA%E6%99%AF%E4%BD%BF%E7%94%A8/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>文件上传及下载操作</title>
     <link href="https://janeleeeee.github.io/2021/10/24/%E5%89%8D%E7%AB%AF%E5%B8%B8%E8%A7%81%E4%B8%9A%E5%8A%A1%E5%9C%BA%E6%99%AF/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E5%8F%8A%E4%B8%8B%E8%BD%BD/"/>
     <id>https://janeleeeee.github.io/2021/10/24/%E5%89%8D%E7%AB%AF%E5%B8%B8%E8%A7%81%E4%B8%9A%E5%8A%A1%E5%9C%BA%E6%99%AF/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E5%8F%8A%E4%B8%8B%E8%BD%BD/</id>
     <published>2021-10-24T07:20:51.413Z</published>
-    <updated>2021-10-24T13:47:39.389Z</updated>
+    <updated>2021-11-20T08:49:35.441Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="上传"><a href="#上传" class="headerlink" title="上传"></a>上传</h1><p><code>底层的上传文件的方式就是form表单，上传文件时将enctype设置成multipart/form-data</code><br>原始form表单不存在浏览器的兼容问题，所有浏览器都支持，但体验感比较差。input必须要设置name属性，否则数据无法发送。  </p><p><code>对于服务端提供上传接口，需要设置相应的请求头，前端提交的是formData形式的文件数据</code><br>    对于业务中进行上传业务时，使用post请求，后端要求除了要上传文件之外，还要传输一些参数。进行接口封装的时候，除了post请求，除了接收data参数，同时还要接收params参数。<br>    对于file一般作为data进行传送，对于其他参数，一般用params传递，所以两者拥有不同的请求头。当然，这种类似get请求的参数传递，最终传递的params最后也都会拼接在路径后面。</p><h1 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h1><p><code>方式一：表单form提交</code><br>    利用表单提交的功能来实现文件的下载。<br>    优点：兼容性比较好，不会出现url长度限制的问题。<br>    缺点：无法知晓下载的进度，无法直接下载浏览器可直接预览的文件类型。<br>    适用场景：使用传统的表单请求的方式，且无需下载一些浏览器可直接预览的文件。</p><p><code>方式二：使用window.open()或者window.location.href</code><br>    相比于其他方式而言，这种方式最为直接。<br>    类似于a标签访问下载链接<br>    接收的参数是url（文件地址或网页地址）<br>    缺点：<br>        1.会出现url长度的限制<br>        2.需要注意url编码问题<br>        3.浏览器可直接浏览的文件类型不提供下载，即若浏览器可以直接预览该文件，则直接打开新页面预览，不会启用下载功能。<br>        4.无法知道下载的进度<br>    使用场景：在已经知道当前的下载的文件的路径，window.open()可直接将参数的请求路径和参数作为其参数发送请求，若为可直接浏览的文件类型，则直接新开一个页面进行预览。  </p><p><code>方式三：a标签的download属性</code><br>    download属性是H5新增属性，可能存在兼容性问题（非chrome浏览器支持性可能不好）<br>    优点：可以解决不能直接下载浏览器可浏览的文件。<br>    缺点：<br>    1.必须要提前知道下载的文件地址<br>    2.不能下载跨域下的浏览器可浏览的文件<br>    3.有兼容性问题，特别是IE<br>    4.不能进行鉴权<br>    使用场景：不用进行鉴权，且不考虑兼容性问题。使用较少。</p><p><code>方式四：利用blob对象</code><br>    除了可以利用已知的文件地址路径进行下载外，还能通过发送ajax请求api获取文件流进行下载。利用blob对象可以将文件流转换为Blob二进制对象。<br>    实现思路：<br>    发请求获取二进制数据，转化为 Blob 对象，利用 URL.createObjectUrl 生成 url 地址，赋值在 a 标签的 href 属性上，结合 download 进行下载。<br>    适用场景：在确定后端返回的数据类型是文件流的前提下，需要利用其进行转成url路径。</p>]]></content>
+    <content type="html"><![CDATA[<h1 id="上传"><a href="#上传" class="headerlink" title="上传"></a>上传</h1><p><code>底层的上传文件的方式就是form表单，上传文件时将enctype设置成multipart/form-data</code><br>原始form表单不存在浏览器的兼容问题，所有浏览器都支持，但体验感比较差。input必须要设置name属性，否则数据无法发送。  </p><p><code>对于服务端提供上传接口，需要设置相应的请求头，前端提交的是formData形式的文件数据</code><br>    对于业务中进行上传业务时，使用post请求，后端要求除了要上传文件之外，还要传输一些参数。进行接口封装的时候，除了post请求，除了接收data参数，同时还要接收params参数。<br>    对于file一般作为data进行传送，对于其他参数，一般用params传递，所以两者拥有不同的请求头。当然，这种类似get请求的参数传递，最终传递的params最后也都会拼接在路径后面。</p><h1 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h1><p><code>方式一：表单form提交</code><br>    利用表单提交的功能来实现文件的下载。<br>    优点：兼容性比较好，不会出现url长度限制的问题。<br>    缺点：无法知晓下载的进度，无法直接下载浏览器可直接预览的文件类型。<br>    适用场景：使用传统的表单请求的方式，且无需下载一些浏览器可直接预览的文件。</p><p><code>方式二：使用window.open()或者window.location.href</code><br>    相比于其他方式而言，这种方式最为直接。<br>    类似于a标签访问下载链接<br>    接收的参数是url（文件地址或网页地址）<br>    缺点：<br>        1.会出现url长度的限制<br>        2.需要注意url编码问题<br>        3.浏览器可直接浏览的文件类型不提供下载，即若浏览器可以直接预览该文件，则直接打开新页面预览，不会启用下载功能。<br>        4.无法知道下载的进度<br>    使用场景：在已经知道当前的下载的文件的路径，window.open()可直接将参数的·请求路径·和·参数·作为其参数发送请求，若为可直接浏览的文件类型，则直接新开一个页面进行预览。 window.open()可以配置新窗口的属性，_self在当前页面打开，_blank默认，新开一个窗口打开链接。</p><p><code>方式三：a标签的download属性</code><br>    download属性是H5新增属性，可能存在兼容性问题（非chrome浏览器支持性可能不好）<br>    优点：可以解决不能直接下载浏览器可浏览的文件。<br>    缺点：<br>    1.必须要提前知道下载的文件地址<br>    2.不能下载跨域下的浏览器可浏览的文件<br>    3.有兼容性问题，特别是IE<br>    4.不能进行鉴权（不可携带token）<br>    使用场景：不用进行鉴权，且不考虑兼容性问题。使用较少。</p><p><code>方式四：利用blob对象</code><br>    除了可以利用已知的文件地址路径进行下载外，还能通过发送ajax请求api获取文件流进行下载。利用blob对象可以将文件流转换为Blob二进制对象。<br>    实现思路：<br>    发请求获取二进制数据，转化为 Blob 对象，利用 URL.createObjectUrl 生成 url 地址，赋值在 a 标签的 href 属性上，结合 download 进行下载。<br>    适用场景：在确定后端返回的数据类型是文件流的前提下，需要利用其进行转成url路径。</p>]]></content>
     
     
       
@@ -56,6 +93,30 @@
     
     
     <category term="hexo搭建FAQ" scheme="https://janeleeeee.github.io/categories/hexo%E6%90%AD%E5%BB%BAFAQ/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>HTTP学习记录</title>
+    <link href="https://janeleeeee.github.io/2021/10/23/HTTP/HTTP%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <id>https://janeleeeee.github.io/2021/10/23/HTTP/HTTP%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</id>
+    <published>2021-10-23T09:57:43.653Z</published>
+    <updated>2021-11-21T14:21:38.379Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="HTTP面试题集锦"><a href="#HTTP面试题集锦" class="headerlink" title="HTTP面试题集锦"></a>HTTP面试题集锦</h1><p><code>HTTP优缺点？</code><br>优点  </p><ul><li>灵活好拓展。–语法上，只规定了基本格式，空格分隔单词、换行分隔字段等。传输形式上，可传输文本、图片、视频等任意格式数据。  </li><li>请求且应答。–一方发送，一方接收。  </li><li>可靠传输。–基于TCP/IP。  </li><li>无状态。–减少网络开销。  </li></ul><p>缺点  </p><ul><li>无状态。需要保存信息的时候  </li><li>明文传输。明文，顾名思义是协议里携带的报文不是二进制数据，而是文本形式。会将报文信息暴露于外部。  </li><li>队头阻塞。当http开启长连接时，会共用一个TCP连接，当某个请求时间过长时，会阻塞其他请求。  </li></ul><p><code>HTTP2.0特点？</code> </p><ul><li>二进制分帧。彻底的二进制协议，头信息以及数据体均为二进制，并统称为“帧”。  </li><li>头部压缩。 针对之前版本的头部偏重的问题，即头部占据较大的字节，2.0使用HPACK算法进行压缩。  </li><li>多路复用。 复用TCP连接，在一个连接里，客户端和浏览器都可同时发送多个请求或回应，且不用按顺序一一对应，解决队头阻塞的问题。  </li><li>服务器推送。允许服务器未经请求，主动向客户端发送资源，即服务器端推送。  </li><li>请求优先级。可以设置数据帧的优先级，让服务端先处理重要的资源，优化用户体验。 </li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;HTTP面试题集锦&quot;&gt;&lt;a href=&quot;#HTTP面试题集锦&quot; class=&quot;headerlink&quot; title=&quot;HTTP面试题集锦&quot;&gt;&lt;/a&gt;HTTP面试题集锦&lt;/h1&gt;&lt;p&gt;&lt;code&gt;HTTP优缺点？&lt;/code&gt;&lt;br&gt;优点  &lt;/p&gt;
+&lt;ul&gt;
+&lt;li</summary>
+      
+    
+    
+    
+    <category term="HTTP" scheme="https://janeleeeee.github.io/categories/HTTP/"/>
     
     
   </entry>
@@ -151,26 +212,6 @@
   </entry>
   
   <entry>
-    <title>npm包管理器</title>
-    <link href="https://janeleeeee.github.io/2021/10/08/%E5%89%8D%E7%AB%AF%E5%B7%A5%E5%85%B7/npm%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8/"/>
-    <id>https://janeleeeee.github.io/2021/10/08/%E5%89%8D%E7%AB%AF%E5%B7%A5%E5%85%B7/npm%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8/</id>
-    <published>2021-10-08T14:05:31.850Z</published>
-    <updated>2021-10-24T13:50:59.334Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="npm-包管理器"><a href="#npm-包管理器" class="headerlink" title="npm 包管理器"></a>npm 包管理器</h1><h2 id="npm"><a href="#npm" class="headerlink" title="npm"></a>npm</h2><p><code>是什么？</code>  </p><ol><li>随nodejs一起安装的包管理器</li></ol>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;npm-包管理器&quot;&gt;&lt;a href=&quot;#npm-包管理器&quot; class=&quot;headerlink&quot; title=&quot;npm 包管理器&quot;&gt;&lt;/a&gt;npm 包管理器&lt;/h1&gt;&lt;h2 id=&quot;npm&quot;&gt;&lt;a href=&quot;#npm&quot; class=&quot;headerlink&quot; ti</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
     <title>vue自定义指令</title>
     <link href="https://janeleeeee.github.io/2021/10/08/vue%E4%BD%93%E7%B3%BB/vue%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8C%87%E4%BB%A4/"/>
     <id>https://janeleeeee.github.io/2021/10/08/vue%E4%BD%93%E7%B3%BB/vue%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8C%87%E4%BB%A4/</id>
@@ -188,6 +229,26 @@
     
     
     <category term="vue业务场景使用" scheme="https://janeleeeee.github.io/categories/vue%E4%B8%9A%E5%8A%A1%E5%9C%BA%E6%99%AF%E4%BD%BF%E7%94%A8/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>npm包管理器</title>
+    <link href="https://janeleeeee.github.io/2021/10/08/%E5%89%8D%E7%AB%AF%E5%B7%A5%E5%85%B7/npm%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8/"/>
+    <id>https://janeleeeee.github.io/2021/10/08/%E5%89%8D%E7%AB%AF%E5%B7%A5%E5%85%B7/npm%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8/</id>
+    <published>2021-10-08T14:05:31.850Z</published>
+    <updated>2021-10-24T13:50:59.334Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="npm-包管理器"><a href="#npm-包管理器" class="headerlink" title="npm 包管理器"></a>npm 包管理器</h1><h2 id="npm"><a href="#npm" class="headerlink" title="npm"></a>npm</h2><p><code>是什么？</code>  </p><ol><li>随nodejs一起安装的包管理器</li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;npm-包管理器&quot;&gt;&lt;a href=&quot;#npm-包管理器&quot; class=&quot;headerlink&quot; title=&quot;npm 包管理器&quot;&gt;&lt;/a&gt;npm 包管理器&lt;/h1&gt;&lt;h2 id=&quot;npm&quot;&gt;&lt;a href=&quot;#npm&quot; class=&quot;headerlink&quot; ti</summary>
+      
+    
+    
     
     
   </entry>
@@ -233,26 +294,6 @@
   </entry>
   
   <entry>
-    <title>关于git</title>
-    <link href="https://janeleeeee.github.io/2021/10/08/%E5%89%8D%E7%AB%AF%E5%B7%A5%E5%85%B7/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
-    <id>https://janeleeeee.github.io/2021/10/08/%E5%89%8D%E7%AB%AF%E5%B7%A5%E5%85%B7/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</id>
-    <published>2021-10-08T14:05:31.849Z</published>
-    <updated>2021-10-24T13:55:29.393Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="关于git"><a href="#关于git" class="headerlink" title="关于git"></a>关于git</h1><h2 id="本地新建工程并推送至远程仓库"><a href="#本地新建工程并推送至远程仓库" class="headerlink" title="本地新建工程并推送至远程仓库"></a>本地新建工程并推送至远程仓库</h2><h3 id="第一种情况–远程仓库中是空的"><a href="#第一种情况–远程仓库中是空的" class="headerlink" title="第一种情况–远程仓库中是空的"></a>第一种情况–远程仓库中是空的</h3><p>1.本地项目中使用 <code> git init </code>命令去初始化本地仓库<br>2.使用 <code> git add .</code>命令将修改的文件保存至暂存区<br>3.使用<code> git commit -m&#39;提交本地仓库使用的备注&#39; </code>将暂存区的内容提交至本地仓库<br>4.使用<code> git remote add origin [仓库地址] </code>与远程仓库建立联系，并起别名为origin<br>5.使用<code> git push -u origin [分支名字] </code> 将本地仓库与远程仓库统一，即将本地内容提交至远程仓库  </p><h3 id="第二种情况–远程仓库中有内容（包含readme-md文件）"><a href="#第二种情况–远程仓库中有内容（包含readme-md文件）" class="headerlink" title="第二种情况–远程仓库中有内容（包含readme.md文件）"></a>第二种情况–远程仓库中有内容（包含readme.md文件）</h3><p>1.将远程仓库 <code>clone</code> 至本地环境中(此时的本地仓库已被初始化，且已经和远程仓库建立连接，修改本地文件可直接提交至远程仓库。)<br>2.使用 <code> git add .</code>命令将修改的文件保存至暂存区<br>3.使用<code> git commit -m&#39;提交本地仓库使用的备注&#39; </code>将暂存区的内容提交至本地仓库<br>4.使用<code> git push -u origin [分支名字] </code> 将本地仓库与远程仓库统一，即将本地内容提交至远程仓库<br>5.<code>[ 注意事项 ]</code>如果仓库本身就有内容，只要不是空的，就不能采取第一种方式就行提交，否则会无法合并，提示有不相关的历史。可以强制合并，但存在风险。一般这种情况会发生在新建仓库的时候，顺便加了一个readme.md文件。  </p><h2 id="提交git时的良好习惯"><a href="#提交git时的良好习惯" class="headerlink" title="提交git时的良好习惯"></a>提交git时的良好习惯</h2><p>  <code>多人协同开发时，共同维护一份代码，容易造成代码冲突，所以避免本地的代码被覆盖，应该先将自己的代码** commit **到本地仓库，**pull**远程仓库的代码后，解决完冲突后，再进行本地代码的提交。 </code>   </p><h1 id="git原理"><a href="#git原理" class="headerlink" title="git原理"></a>git原理</h1><h2 id="功能区"><a href="#功能区" class="headerlink" title="功能区"></a>功能区</h2><p>  。工作区（workspace）、暂存区（temporary repository）、本地仓库（local repository）、远程仓库 （remote repository）<br>  。workspace–&gt;git add .–&gt;temporary repository–&gt;git commit–&gt;local repository –&gt; git push –&gt;remote repository  </p><h2 id="命令原理分析"><a href="#命令原理分析" class="headerlink" title="命令原理分析"></a>命令原理分析</h2><h3 id="git-add"><a href="#git-add" class="headerlink" title="git add"></a>git add</h3><p>  。执行该命令，保存暂存区的异动文件（与之前文件相比发生的变化包括修改、新增、删除）至暂存区，底层进行操作：git将代码修改了的部分进行记录，然后进行SHAI操作，生成一个blob对象（快照），存储至仓库中（注意，此时代码快照实际上已经存储到仓库中了），但并没有在目录树上进行映射，只在索引文件中进行映射。  </p><h3 id="git-commit"><a href="#git-commit" class="headerlink" title="git commit"></a>git commit</h3><p>  。将索引中的映射更改到对象树中，对象树会记录所有的commitId和blob的映射，从而可以找到对应的代码<br>  。进行一次commit后，生成一个新的commit，做完提交后，head指针会移动到现在的commit<br>  。每次commit，Git存储的是全新的文件快照并不是储存文件的变更部分</p><h3 id="git的常用操作-amp-问题solve"><a href="#git的常用操作-amp-问题solve" class="headerlink" title="git的常用操作&amp;问题solve"></a>git的常用操作&amp;问题solve</h3><p>  <a href="https://juejin.cn/post/6891146425590087693">https://juejin.cn/post/6891146425590087693</a></p><h3 id="git库中想要上传内容，需要在git库里面注册电脑本地的ssh-key，否则没有权限对仓库进行任何操作。"><a href="#git库中想要上传内容，需要在git库里面注册电脑本地的ssh-key，否则没有权限对仓库进行任何操作。" class="headerlink" title="git库中想要上传内容，需要在git库里面注册电脑本地的ssh key，否则没有权限对仓库进行任何操作。"></a>git库中想要上传内容，需要在git库里面注册电脑本地的ssh key，否则没有权限对仓库进行任何操作。</h3><p><code>类似于git仓库需要你的钥匙的副本，在你申请进入的时候提供佐证，只有两份钥匙内容一样才能进入，否则没有权限</code></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;关于git&quot;&gt;&lt;a href=&quot;#关于git&quot; class=&quot;headerlink&quot; title=&quot;关于git&quot;&gt;&lt;/a&gt;关于git&lt;/h1&gt;&lt;h2 id=&quot;本地新建工程并推送至远程仓库&quot;&gt;&lt;a href=&quot;#本地新建工程并推送至远程仓库&quot; class=&quot;head</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
     <title>css相关总结</title>
     <link href="https://janeleeeee.github.io/2021/10/08/css/css/"/>
     <id>https://janeleeeee.github.io/2021/10/08/css/css/</id>
@@ -273,6 +314,48 @@
   </entry>
   
   <entry>
+    <title>关于git</title>
+    <link href="https://janeleeeee.github.io/2021/10/08/%E5%89%8D%E7%AB%AF%E5%B7%A5%E5%85%B7/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
+    <id>https://janeleeeee.github.io/2021/10/08/%E5%89%8D%E7%AB%AF%E5%B7%A5%E5%85%B7/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</id>
+    <published>2021-10-08T14:05:31.849Z</published>
+    <updated>2021-10-24T13:55:29.393Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="关于git"><a href="#关于git" class="headerlink" title="关于git"></a>关于git</h1><h2 id="本地新建工程并推送至远程仓库"><a href="#本地新建工程并推送至远程仓库" class="headerlink" title="本地新建工程并推送至远程仓库"></a>本地新建工程并推送至远程仓库</h2><h3 id="第一种情况–远程仓库中是空的"><a href="#第一种情况–远程仓库中是空的" class="headerlink" title="第一种情况–远程仓库中是空的"></a>第一种情况–远程仓库中是空的</h3><p>1.本地项目中使用 <code> git init </code>命令去初始化本地仓库<br>2.使用 <code> git add .</code>命令将修改的文件保存至暂存区<br>3.使用<code> git commit -m&#39;提交本地仓库使用的备注&#39; </code>将暂存区的内容提交至本地仓库<br>4.使用<code> git remote add origin [仓库地址] </code>与远程仓库建立联系，并起别名为origin<br>5.使用<code> git push -u origin [分支名字] </code> 将本地仓库与远程仓库统一，即将本地内容提交至远程仓库  </p><h3 id="第二种情况–远程仓库中有内容（包含readme-md文件）"><a href="#第二种情况–远程仓库中有内容（包含readme-md文件）" class="headerlink" title="第二种情况–远程仓库中有内容（包含readme.md文件）"></a>第二种情况–远程仓库中有内容（包含readme.md文件）</h3><p>1.将远程仓库 <code>clone</code> 至本地环境中(此时的本地仓库已被初始化，且已经和远程仓库建立连接，修改本地文件可直接提交至远程仓库。)<br>2.使用 <code> git add .</code>命令将修改的文件保存至暂存区<br>3.使用<code> git commit -m&#39;提交本地仓库使用的备注&#39; </code>将暂存区的内容提交至本地仓库<br>4.使用<code> git push -u origin [分支名字] </code> 将本地仓库与远程仓库统一，即将本地内容提交至远程仓库<br>5.<code>[ 注意事项 ]</code>如果仓库本身就有内容，只要不是空的，就不能采取第一种方式就行提交，否则会无法合并，提示有不相关的历史。可以强制合并，但存在风险。一般这种情况会发生在新建仓库的时候，顺便加了一个readme.md文件。  </p><h2 id="提交git时的良好习惯"><a href="#提交git时的良好习惯" class="headerlink" title="提交git时的良好习惯"></a>提交git时的良好习惯</h2><p>  <code>多人协同开发时，共同维护一份代码，容易造成代码冲突，所以避免本地的代码被覆盖，应该先将自己的代码** commit **到本地仓库，**pull**远程仓库的代码后，解决完冲突后，再进行本地代码的提交。 </code>   </p><h1 id="git原理"><a href="#git原理" class="headerlink" title="git原理"></a>git原理</h1><h2 id="功能区"><a href="#功能区" class="headerlink" title="功能区"></a>功能区</h2><p>  。工作区（workspace）、暂存区（temporary repository）、本地仓库（local repository）、远程仓库 （remote repository）<br>  。workspace–&gt;git add .–&gt;temporary repository–&gt;git commit–&gt;local repository –&gt; git push –&gt;remote repository  </p><h2 id="命令原理分析"><a href="#命令原理分析" class="headerlink" title="命令原理分析"></a>命令原理分析</h2><h3 id="git-add"><a href="#git-add" class="headerlink" title="git add"></a>git add</h3><p>  。执行该命令，保存暂存区的异动文件（与之前文件相比发生的变化包括修改、新增、删除）至暂存区，底层进行操作：git将代码修改了的部分进行记录，然后进行SHAI操作，生成一个blob对象（快照），存储至仓库中（注意，此时代码快照实际上已经存储到仓库中了），但并没有在目录树上进行映射，只在索引文件中进行映射。  </p><h3 id="git-commit"><a href="#git-commit" class="headerlink" title="git commit"></a>git commit</h3><p>  。将索引中的映射更改到对象树中，对象树会记录所有的commitId和blob的映射，从而可以找到对应的代码<br>  。进行一次commit后，生成一个新的commit，做完提交后，head指针会移动到现在的commit<br>  。每次commit，Git存储的是全新的文件快照并不是储存文件的变更部分</p><h3 id="git的常用操作-amp-问题solve"><a href="#git的常用操作-amp-问题solve" class="headerlink" title="git的常用操作&amp;问题solve"></a>git的常用操作&amp;问题solve</h3><p>  <a href="https://juejin.cn/post/6891146425590087693">https://juejin.cn/post/6891146425590087693</a></p><h3 id="git库中想要上传内容，需要在git库里面注册电脑本地的ssh-key，否则没有权限对仓库进行任何操作。"><a href="#git库中想要上传内容，需要在git库里面注册电脑本地的ssh-key，否则没有权限对仓库进行任何操作。" class="headerlink" title="git库中想要上传内容，需要在git库里面注册电脑本地的ssh key，否则没有权限对仓库进行任何操作。"></a>git库中想要上传内容，需要在git库里面注册电脑本地的ssh key，否则没有权限对仓库进行任何操作。</h3><p><code>类似于git仓库需要你的钥匙的副本，在你申请进入的时候提供佐证，只有两份钥匙内容一样才能进入，否则没有权限</code></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;关于git&quot;&gt;&lt;a href=&quot;#关于git&quot; class=&quot;headerlink&quot; title=&quot;关于git&quot;&gt;&lt;/a&gt;关于git&lt;/h1&gt;&lt;h2 id=&quot;本地新建工程并推送至远程仓库&quot;&gt;&lt;a href=&quot;#本地新建工程并推送至远程仓库&quot; class=&quot;head</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>后台系统vue项目</title>
+    <link href="https://janeleeeee.github.io/2021/10/08/company/%E5%90%8E%E5%8F%B0%E7%B3%BB%E7%BB%9F%E5%B7%A5%E4%BD%9C%E8%AE%B0%E5%BD%95/"/>
+    <id>https://janeleeeee.github.io/2021/10/08/company/%E5%90%8E%E5%8F%B0%E7%B3%BB%E7%BB%9F%E5%B7%A5%E4%BD%9C%E8%AE%B0%E5%BD%95/</id>
+    <published>2021-10-08T14:05:31.848Z</published>
+    <updated>2021-11-20T08:53:00.996Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="vue2-x-Elementui"><a href="#vue2-x-Elementui" class="headerlink" title="vue2.x + Elementui"></a>vue2.x + Elementui</h3><h2 id="新增-编辑商品"><a href="#新增-编辑商品" class="headerlink" title="新增/编辑商品"></a>新增/编辑商品</h2><h3 id="nextTick用法"><a href="#nextTick用法" class="headerlink" title="$nextTick用法"></a>$nextTick用法</h3><pre><code>业务场景：主要用于tab切换定位</code></pre><h2 id="关于父子组件之间的传值及刷新处理"><a href="#关于父子组件之间的传值及刷新处理" class="headerlink" title="关于父子组件之间的传值及刷新处理"></a>关于父子组件之间的传值及刷新处理</h2><pre><code>业务场景：由于子组件为弹窗（dialog、drawer），由于彼此之间关联共同的状态（订单的状态），于是想要在子组件关闭后，实现刷新父组件列表的操作。实现一：父子组件传值    。子组件监听自身的show，    watch: &#123; // 监听弹窗组件的显示隐藏        show: function(val, oldVal) &#123;        this.$emit(&#39;func&#39;, val)// 触发传值父组件            &#125;,        deep: true,        immediate: true    &#125;,    。父组件调用子组件，并自定义方法刷新    &lt;after-sales-dialog ref=&quot;afterSalesDialog&quot; @func=&quot;isDialogShow&quot; /&gt;    /**    * 监听详情子组件的显示与隐藏,隐藏操作后刷新列表，更新相关订单的状态    */    isDialogShow(data) &#123;        const show = data        if (!show) &#123;            this.getTableData()        &#125;    &#125;,实现二：父子传值的另外一种方式      。父组件绑定成功方法，该方法绑定表格请求的方法          &lt;deliver-dialog ref=&quot;deliverDialog&quot; @success=&quot;getTableData&quot; /&gt;      。子组件在接口调用成功后触发成功的方法       api(params).then(res =&gt; &#123;        this.show = false        this.msgSuccess(&#39;操作成功&#39;)        this.$emit(&#39;success&#39;) //触发父组件中成功的方法      &#125;)</code></pre><h3 id="结合源码分析父子组件传值"><a href="#结合源码分析父子组件传值" class="headerlink" title="结合源码分析父子组件传值"></a>结合源码分析父子组件传值</h3>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;vue2-x-Elementui&quot;&gt;&lt;a href=&quot;#vue2-x-Elementui&quot; class=&quot;headerlink&quot; title=&quot;vue2.x + Elementui&quot;&gt;&lt;/a&gt;vue2.x + Elementui&lt;/h3&gt;&lt;h2 id=&quot;新增-编辑</summary>
+      
+    
+    
+    
+    <category term="vue业务场景使用" scheme="https://janeleeeee.github.io/categories/vue%E4%B8%9A%E5%8A%A1%E5%9C%BA%E6%99%AF%E4%BD%BF%E7%94%A8/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>砍价活动REVIEW</title>
     <link href="https://janeleeeee.github.io/2021/10/08/company/%E7%A0%8D%E4%BB%B7%E6%B4%BB%E5%8A%A8%E5%BC%80%E5%8F%91/"/>
     <id>https://janeleeeee.github.io/2021/10/08/company/%E7%A0%8D%E4%BB%B7%E6%B4%BB%E5%8A%A8%E5%BC%80%E5%8F%91/</id>
@@ -288,28 +371,6 @@
       
     
     
-    
-    
-  </entry>
-  
-  <entry>
-    <title>后台系统vue项目</title>
-    <link href="https://janeleeeee.github.io/2021/10/08/company/%E5%90%8E%E5%8F%B0%E7%B3%BB%E7%BB%9F%E5%B7%A5%E4%BD%9C%E8%AE%B0%E5%BD%95/"/>
-    <id>https://janeleeeee.github.io/2021/10/08/company/%E5%90%8E%E5%8F%B0%E7%B3%BB%E7%BB%9F%E5%B7%A5%E4%BD%9C%E8%AE%B0%E5%BD%95/</id>
-    <published>2021-10-08T14:05:31.848Z</published>
-    <updated>2021-10-10T02:35:47.926Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="vue2-x-Elementui"><a href="#vue2-x-Elementui" class="headerlink" title="vue2.x + Elementui"></a>vue2.x + Elementui</h3><h2 id="新增-编辑商品"><a href="#新增-编辑商品" class="headerlink" title="新增/编辑商品"></a>新增/编辑商品</h2><h3 id="nextTick用法"><a href="#nextTick用法" class="headerlink" title="$nextTick用法"></a>$nextTick用法</h3><pre><code>业务场景：主要用于tab切换定位</code></pre><h2 id="关于父子组件之间的传值及刷新处理"><a href="#关于父子组件之间的传值及刷新处理" class="headerlink" title="关于父子组件之间的传值及刷新处理"></a>关于父子组件之间的传值及刷新处理</h2><pre><code>业务场景：由于子组件为弹窗（dialog、drawer），由于彼此之间关联共同的状态（订单的状态），于是想要在子组件关闭后，实现刷新父组件列表的操作。实现一：父子组件传值    。子组件监听自身的show，    watch: &#123; // 监听弹窗组件的显示隐藏        show: function(val, oldVal) &#123;        this.$emit(&#39;func&#39;, val)// 触发传值父组件            &#125;,        deep: true,        immediate: true    &#125;,    。父组件调用子组件，并自定义方法刷新    &lt;after-sales-dialog ref=&quot;afterSalesDialog&quot; @func=&quot;isDialogShow&quot; /&gt;    /**    * 监听详情子组件的显示与隐藏,隐藏操作后刷新列表，更新相关订单的状态    */    isDialogShow(data) &#123;        const show = data        if (!show) &#123;            this.getTableData()        &#125;    &#125;,实现二：父子传值的另外一种方式      。父组件绑定成功方法，该方法绑定表格请求的方法          &lt;deliver-dialog ref=&quot;deliverDialog&quot; @success=&quot;getTableData&quot; /&gt;      。子组件在接口调用成功后触发成功的方法       api(params).then(res =&gt; &#123;        this.show = false        this.msgSuccess(&#39;操作成功&#39;)        this.$emit(&#39;success&#39;) //触发父组件中成功的方法      &#125;)</code></pre><h3 id="结合源码分析父子组件传值"><a href="#结合源码分析父子组件传值" class="headerlink" title="结合源码分析父子组件传值"></a>结合源码分析父子组件传值</h3>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h3 id=&quot;vue2-x-Elementui&quot;&gt;&lt;a href=&quot;#vue2-x-Elementui&quot; class=&quot;headerlink&quot; title=&quot;vue2.x + Elementui&quot;&gt;&lt;/a&gt;vue2.x + Elementui&lt;/h3&gt;&lt;h2 id=&quot;新增-编辑</summary>
-      
-    
-    
-    
-    <category term="vue业务场景使用" scheme="https://janeleeeee.github.io/categories/vue%E4%B8%9A%E5%8A%A1%E5%9C%BA%E6%99%AF%E4%BD%BF%E7%94%A8/"/>
     
     
   </entry>
