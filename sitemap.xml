@@ -146,13 +146,6 @@
 
   
   <url>
-    <loc>https://janeleeeee.github.io/categories/vue%E4%B8%9A%E5%8A%A1%E5%9C%BA%E6%99%AF%E4%BD%BF%E7%94%A8/</loc>
-    <lastmod>2022-03-28</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://janeleeeee.github.io/categories/HTTP/</loc>
     <lastmod>2022-03-28</lastmod>
     <changefreq>daily</changefreq>
@@ -174,7 +167,7 @@
   </url>
   
   <url>
-    <loc>https://janeleeeee.github.io/categories/%E9%A1%B9%E7%9B%AE%E5%AD%A6%E4%B9%A0%E5%A4%8D%E7%9B%98/</loc>
+    <loc>https://janeleeeee.github.io/categories/vue%E4%B8%9A%E5%8A%A1%E5%9C%BA%E6%99%AF%E4%BD%BF%E7%94%A8/</loc>
     <lastmod>2022-03-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -182,6 +175,13 @@
   
   <url>
     <loc>https://janeleeeee.github.io/categories/%E5%B7%A5%E5%85%B7%E7%B1%BB/</loc>
+    <lastmod>2022-03-28</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://janeleeeee.github.io/categories/%E9%A1%B9%E7%9B%AE%E5%AD%A6%E4%B9%A0%E5%A4%8D%E7%9B%98/</loc>
     <lastmod>2022-03-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
